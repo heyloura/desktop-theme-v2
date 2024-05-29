@@ -226,14 +226,14 @@
     {{ end }}
 
 {{ $pag := $.Paginator }}
-<nav class="paginator">
+<nav class='paginator'>
 	{{ if $pag.HasPrev }}
-	<a style="float: left;" rel="prev" href="{{ $pag.Prev.URL }}" title="Previous Page">
+	<a style='float: left;' rel='prev' href='{{ $pag.Prev.URL }}' title='Previous Page'>
 		← Newer Posts
 	</a>
 	{{ end }}
 	{{ if $pag.HasNext }}
-	<a style="float: right;" rel="next" href="{{ $pag.Next.URL }}">
+	<a style='float: right;' rel='next' href='{{ $pag.Next.URL }}'>
 		Older Posts →
 	</a>
 	{{ end }}
