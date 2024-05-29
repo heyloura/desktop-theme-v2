@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div id="pageDialog" title="{{ if in .Page.Params.categories "homeschooling"  }}Hey Loura! Homeschooling{{ else if in .Page.Params.categories "lillihub"  }}Hey Loura! Lillihub{{end}}" class="h-feed post-content">
+
+{{ if in .Page.Params.categories "homeschooling" }}
+    {{ partial "homeschool.html" . }}
+{{ else if in .Page.Params.categories "code" }}
+    {{ partial "code.html" . }}
+{{ else if in .Page.Params.categories "lillihub" }}
+    {{ partial "lillihub.html" . }}
+{{ else }}
+    {{ partial "code.html" . }}
+{{ end }}
+
+
+
+</div>
+
+<script>
+$( "#pageDialog" ).dialog({ height: $(window).height() - 10, width: $(window).width() - 20 });
+</script>
+{{ end }}
