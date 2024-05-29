@@ -178,22 +178,42 @@
 </header>
 
 <section class='h-feed' style='grid-area: content;'>
-    <h2 style='margin-top:2em;'>📜 Adventure Log</h2> 
+   <p style='margin-top:2em;' class='frame-golden-2'>
+    {{ range (.Paginator.Pages).GroupByDate "2006" }}
+    <a href='#{{ .Key }}'>{{ .Key }}</a>  
+    {{ end }}
+    </p>
+    {{ range (.Paginator.Pages).GroupByDate "2006" }}
+        <h2 style='margin-top:2em;' id='{{ .Key }}'>📜 The year was {{ .Key }}</h2>
+          {{ range .Pages }}
     
-    {{ range (.Paginate (where .Site.Pages "Type" "post") 10).Pages.GroupByDate "January 2, 2006" }}
     <article class='h-entry frame-golden-2'>
-    <h3>{{ .Key }}</h3> 
-    {{ range .Pages.Reverse }}
-    <p><a style='display:none;' class='p-author h-card' href='http://heyloura.com'>Loura</a><a href='{{ .Permalink }}' class='u-url'>
-            <time class='dt-published' datetime='{{ .Date.Format "2006-01-02 15:04:05 -0700" }}' >
-                {{ .Date.Format "3:04 PM" }}
+        <header>
+            <a style='display:none;' class='p-author h-card' href='http://heyloura.com'>Loura</a>
+            {{ if .Title }}
+            <h2><a class='u-url p-name' href='{{ .Permalink }}'>{{ .Title }}</a></h2>
+            <time datetime='{{ .Date.Format "2006-01-02 15:04:05 -0700" }}' class='dt-published'>
+              {{ .Date.Format "2 January 2006" }}
             </time>
-        </a></p>
-    <div class='e-content frame-grey'>
-    <h2>{{ .Title }}</h2>
-     {{ .Content }}
-    
-    <p style='text-align:right; font-weight:bold;' data-id='{{ .RelPermalink }}'></p>
+            {{ else }}
+            <h2><a href='{{ .Permalink }}' class='u-url'>
+                <time class='dt-published' datetime='{{ .Date.Format "2006-01-02 15:04:05 -0700" }}' >
+                    {{ .Date.Format "2 January 2006" }}
+                </time>
+            </a></h2>
+            {{ end }}
+        </header>
+        <div class='e-content'>
+             {{ if or .Title .Truncated }}
+               {{ .Summary }}
+               {{ if .Truncated }}
+               <p><a href='{{ .RelPermalink }}'>Read More</a></p>
+               {{ end }}
+             {{ else }}
+               {{ .Content }}
+             {{ end }}
+        </div>
+        <p style='text-align:right; font-weight:bold;' data-id='{{ .RelPermalink }}'></p>
     <p style='text-align:right;'>
      {{- if .Page.Params.categories -}}
       {{- range $index, $category := .Page.Params.categories -}}
@@ -201,7 +221,7 @@
       {{- end -}}
     {{- end -}}
     </p>
-    </div>
+    </article>
     <script>
       fetch('https://micro.blog/conversation.js?format=jsonfeed&url=https%3A%2F%2Fheyloura.com' + encodeURIComponent('{{ .RelPermalink }}'))
       .then(response => response.json())
@@ -212,7 +232,6 @@
             postA.setAttribute('href', '{{ .RelPermalink }}#conversation');
             postA.innerHTML = '💬' + conversation.items.length;
             repliesLink.prepend(postA);
-            //repliesLink.innerText = '💬' + conversation.items.length;
         } else {
             repliesLink.remove()
         }
@@ -221,9 +240,12 @@
         // TODO: nothing for now…
       });
     </script>
-    {{ end }}
-    </article>
-    {{ end }}
+        {{ end }} <!-- end range .Pages -->
+    
+    
+    
+    {{ end }} <!-- end year group... -->
+    
 
 {{ $pag := $.Paginator }}
 <nav class='paginator'>
