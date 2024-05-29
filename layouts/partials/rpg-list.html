@@ -1,0 +1,249 @@
+<iframe style="width:100%;height:99%;border:0;" srcdoc="
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RPG by Hey Loura</title>
+		<meta charset='utf-8' />
+		<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+		<link rel='stylesheet' href='/css/rpgui.min.css' />
+	</head>
+	<body> 
+        <style>
+            .wrapper span {
+                position: fixed;
+                bottom: -80px;
+                animation: animate 10s linear infinite;
+                font-size: 60px;
+                z-index: -1;
+            }
+            
+            .wrapper span:nth-child(1){
+                left: 60px;
+                animation-delay: 0.6s;    
+            }
+            .wrapper span:nth-child(2){
+                left: 10%;
+                animation-delay: 3s;  
+            }
+            .wrapper span:nth-child(3){
+                left: 20%;
+                animation-delay: 2s;    
+            }
+            .wrapper span:nth-child(4){
+                left: 30%;
+                animation-delay: 5s;   
+            }
+            .wrapper span:nth-child(5){
+                left: 40%;
+                animation-delay: 1s;    
+            }
+            .wrapper span:nth-child(6){
+                left: 50%;
+                animation-delay: 7s;    
+            }
+            .wrapper span:nth-child(7){
+                left: 60%;
+                animation-delay: 6s;  
+            }
+            .wrapper span:nth-child(8){
+                left: 70%;
+                animation-delay: 8s;    
+            }
+            .wrapper span:nth-child(9){
+                left: 80%;
+                animation-delay: 6s;  
+            }
+            .wrapper span:nth-child(10){
+                left: 90%;
+                animation-delay: 4s;    
+            }
+            
+            @keyframes animate{
+                0% {
+                  transform: translateY(0);
+                    opacity: 1
+                }
+                70%{
+                    opacity: 0.8;
+                }
+                100% {
+                  transform: translateY(-800px) rotate(360deg);	
+                    opacity: 0.1
+                }
+            }
+            </style>   
+                <div class='wrapper effects'>
+                    <span>🐉</span>
+                    <span>🗡️</span>
+                    <span>🔮</span>
+                    <span>⚒️</span>
+                    <span>👻</span>
+                    <span>🧛‍♀️</span>
+                    <span>🦇</span>
+                    <span>🛡️</span>
+                    <span>👑</span>
+                    <span style='color:#fff;'>$8<img class='avatar' height='40px' src='https://heyloura.com/uploads/2022/cc05fe073b.png' /></span>
+               </div>
+		<div class='main frame-golden' style='padding-bottom: 3em;'>
+            <nav>
+                <div class='main-menu'>
+                
+                            <menu>
+                <li style='margin-bottom: 1em;'><a class='golden' href='/'>{{ .Site.Title }}</a></li>
+                <li class='avatar-li'><img class='avatar' style='image-rendering: pixelated;' height='125' src='https://heyloura.com/uploads/2024/3a04add34b.png'><br/><small>Lvl {{ len ((where .Site.Pages 'Type' 'post').GroupByDate '2006' )}} Indie Webmaster</small></li>
+                <!--<li><a href='/'>🏰 Home</a></li>
+                <li><a href='/about'>📜 Sheet</a></li>
+                <li><a href='/now'>💰 Inventory</a></li>-->
+                <li><a href='/photos'>🔮 Photos</a></li>
+                <li><a href='/reading'>📚 Library</a></li>
+                <li><a href='/bookmarks'>🔖 Saved</a></li>
+                <li><a href='/archive'>🏛️ Archive</a></li>
+                <li><a href='/search-space'>🔎 Search</a></li>
+                            </menu>
+                <aside class='frame quests'>
+                                    <header>
+                                        <h3>Available<br/>Quests</h3>
+                                        <hr style='clear:both'>
+                                    </header>
+                                    <div>
+                    {{ $list := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
+                    {{ if gt (len $list) 0 }}
+                            {{ range sort $list "Title" }}
+                              {{if and (not (strings.Contains .Title "newsletter")) (not (strings.Contains .Title "timeline")) }}
+                                <a href='{{ .Permalink }}'>{{ .Title }}</a><br/>
+                              {{ end }}
+                            {{ end }}
+                    {{ end }}
+                                    </div>
+                                </aside>
+                </div>
+                
+                <div class='level-bars'>
+                    {{ $posts := where site.RegularPages "Type" "post" }}
+                    {{ $microPostsCount := float ( len ( where $posts ".Params.title"  "=' nil )) }}
+                    {{ $titlePostsCount := float ( len ( where $posts ".Params.title"  "!=" nil )) }}
+                    
+                    {{ $scratch := newScratch }}
+                    {{ $scratch.Set "longCount" 0 }}
+                    {{ range $posts }}
+                        {{ $scratch.Add "wordcount" .WordCount }}
+                        {{ if ge .WordCount ($scratch.Get "longCount") }}
+                            {{ $scratch.Set "longestPost" . }}
+                            {{ $scratch.Set "longCount" .WordCount }}
+                        {{ end }}
+                    {{ end }}
+                    {{ $postCount :=  len ($posts) }}
+                    {{ $wordCount := $scratch.Get "wordcount" }}
+                    {{ $maxWordCount := $scratch.Get "longestPost" }}
+                    {{ $avgPostLength := float (div $wordCount $postCount) }}
+                    <div class='bar'>
+                                        <label>Health: {{ $titlePostsCount }}/{{ math.Add $titlePostsCount   $microPostsCount}}</label><br/>
+                                        <small>Long Posts</small>
+                                        <div id='hp-bar' data-value='0.4' class='rpgui-progress red' data-rpguitype='progress'><div class=' rpgui-progress-track'><div class=' rpgui-progress-fill red' style='left: 0px; width: {{math.Mul 100 (math.Div $titlePostsCount (math.Add $titlePostsCount $microPostsCount))}}%;'></div></div><div class=' rpgui-progress-left-edge'></div><div class=' rpgui-progress-right-edge'></div></div>
+                    </div>
+                    <div class='bar'>
+                                        <label style='margin-top:1em;'>Mana: {{ $microPostsCount }}/{{ math.Add $titlePostsCount   $microPostsCount}}</label><br/>
+                                        <small>Micro Posts</small>
+                                        <div id='mana-bar' data-value='0.8' class='rpgui-progress blue' data-rpguitype='progress'><div class=' rpgui-progress-track'><div class=' rpgui-progress-fill blue' style='left: 0px; width: {{math.Mul 100 (math.Div $microPostsCount (math.Add $titlePostsCount $microPostsCount))}}%;'></div></div><div class=' rpgui-progress-left-edge'></div><div class=' rpgui-progress-right-edge'></div></div>
+                    </div>
+                    <div class='bar'>
+                                        <label style='margin-top:1em;'>Stamina: {{ $avgPostLength }}/{{ with $scratch.Get "longestPost" }}{{lang.FormatNumberCustom 0 .WordCount "- . ,"}}{{ end }}</label><br/>
+                                        <small>avg / longest</small>
+                                        <div id='stamina-bar' data-value='0.2' class='rpgui-progress green' data-rpguitype='progress'><div class=' rpgui-progress-track'><div class=' rpgui-progress-fill green' style='left: 0px; width:{{ with $scratch.Get "longestPost" }}{{math.Mul 100 (math.Div $avgPostLength .WordCount)}}{{ end }}%;'></div></div><div class=' rpgui-progress-left-edge'></div><div class=' rpgui-progress-right-edge'></div></div>
+                    </div>
+                    <div class='bar'>
+                                        <label style='margin-top:1em;'>Experience: {{ lang.FormatNumberCustom 0 $wordCount "- . ,"}}/40,000</label>
+                    <br/><small>Word Count</small>
+                                        <div id='stamina-bar' data-value='0.5' class='rpgui-progress' data-rpguitype='progress'><div class=' rpgui-progress-track'><div class=' rpgui-progress-fill' style='left: 0px; width: {{math.Mul 100 (math.Div $wordCount  40000.0)}}%;'></div></div><div class=' rpgui-progress-left-edge'></div><div class=' rpgui-progress-right-edge'></div></div></div>
+                    </div>
+                
+                
+                        </nav>                	
+<div style='flex-grow: 1;'>
+        
+        
+</div>
+		</div> 
+        <footer style='padding-top: 1em;'>
+            Made with 💖 and frequently under 🚧
+        </footer> 
+        <section style='clear:both; padding:2em 0;margin: 0 auto;max-width: 860px;' class='bottom-frames'>
+            <aside class='frame'>
+                <header><h3>Indieweb</h3></header>
+<hr style='clear:both'>
+                <p>
+                    <a href='https://xn--sr8hvo.ws/%F0%9F%91%8D%F0%9F%93%8A%F0%9F%92%85/previous'>⬅️</a>
+                    <a href='https://xn--sr8hvo.ws'>IndieWeb 🕸️💍</a>
+                    <a href='https://xn--sr8hvo.ws/%F0%9F%91%8D%F0%9F%93%8A%F0%9F%92%85/next'>➡️</a>
+                </p>
+                <p>
+                    <a href='https://indieweb.org/'>
+                        <img src='https://heyloura.com/uploads/2022/4af033892a.png' height='25' alt='IndieWebCamp' style='image-rendering:pixelated;'>
+                    </a>
+                </p>
+                <p><img src='https://heyloura.com/uploads/2022/04d164b1ac.png' height='25' alt='Webmention' style='image-rendering:pixelated;'></p>
+                <p><img src='https://heyloura.com/uploads/2022/927e2836c9.png' height='25' alt='Microformats' style='image-rendering:pixelated;'></p>
+            </aside>
+
+
+
+            <aside class='frame'>
+                <header><h3>WWW & Fediverse</h3></header>
+<hr style='clear:both'>
+                <p>
+                    <a href='https://micro.blog/heyloura'><img style='image-rendering: pixelated;' height='32' src='https://heyloura.com/uploads/2022/1eb5b77d81.png' alt='microblog website icon'></a>               
+                    <a href='https://heyloura.com/feed.xml'><img style='image-rendering: pixelated;' height='32' src='https://heyloura.com/uploads/2022/e29d8fe9f3.png' alt='rss feed'></a>
+<a href='https://github.com/heyloura'><img style='image-rendering: pixelated;' height='32' src='https://heyloura.com/uploads/2023/icons8-github-30.png' alt='github link'></a>
+                </p>
+                <p><img style='vertical-align:middle; image-rendering: pixelated;border:none;' height='32' src='https://heyloura.com/uploads/2022/f02dbee17f.png' alt='activity pub' /> <small><a href='https://micro.blog/heyloura?remote_follow=1' target='_blank'>@heyloura@heyloura.com</a></small></p>
+<p><a href='mailto:me@loura@hey.com' rel='me'>loura@hey.com</a></p>
+<p><a href='https://heyloura.com/' class='h-card' rel='me'>Loura</a></p>
+            </aside>
+
+
+
+<aside class='frame'>
+                <header><h3>Analytics</h3></header>
+<hr style='clear:both'>
+                <p><span class='tinylytics_hits'></span> website hits tracked by <a href='https://tinylytics.app/public/k8W9_T_FtwGM-5zeSNC7'>tinylytics.app</a></p>
+<a href='#' target='_blank' class='tinylytics_webring'>
+<img class='tinylytics_webring_avatar' src='' style='display: none'/> tinylytics 🕸️💍
+</a></p>
+                <header style='padding-top:1em;'><h3>Credits</h3></header>
+<hr style='clear:both'>
+                <p><a target='_blank' href='https://github.com/RonenNess/RPGUI'>RPG UI</a><br><a href='https://www.avatarsinpixels.com/'>Avatars in Pixels</a></p>
+            </aside>
+        </section>
+</section>
+
+<script src='https://tinylytics.app/embed/ty-z3nCjHzz9nhTen2UU.js?hits&webring=avatar&kudos=👍' defer></script>
+		<script src='{{ . }}'></script>
+		{{ end }}
+
+        <script>
+            window.Prism = window.Prism || {};
+            window.Prism.manual = true;
+          </script>
+          
+          <script src='/js/prism.js'></script>
+          
+          <script>
+            $(function() {
+              // Wrap the code inside the required <code> tag, when needed:
+              $('pre').each(function() {
+                if (1 !== $(this).children('code').length) {
+                  $(this).wrapInner('<code>');
+                }
+                if(!$(this).attr('class') || $(this).attr('class').indexOf('language-') !== 1)
+                {
+                    $(this).addClass('language-html');
+                }
+              });
+          
+              Prism.highlightAll()
+            });
+          </script>
+	</body>
+</html>
+
+            "></iframe>
