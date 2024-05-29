@@ -91,9 +91,6 @@
                             <menu>
                 <li style='margin-bottom: 1em;'><a class='golden' href='/'>{{ .Site.Title }}</a></li>
                 <li class='avatar-li'><img class='avatar' style='image-rendering: pixelated;' height='125' src='https://heyloura.com/uploads/2024/3a04add34b.png'><br/><small>Lvl {{ len ((where .Site.Pages "Type" "post").GroupByDate "2006" )}} Indie Webmaster</small></li>
-                <!--<li><a href='/'>🏰 Home</a></li>
-                <li><a href='/about'>📜 Sheet</a></li>
-                <li><a href='/now'>💰 Inventory</a></li>-->
                 <li><a href='/photos'>🔮 Photos</a></li>
                 <li><a href='/reading'>📚 Library</a></li>
                 <li><a href='/bookmarks'>🔖 Saved</a></li>
@@ -109,7 +106,7 @@
                     {{ $list := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
                     {{ if gt (len $list) 0 }}
                             {{ range sort $list "Title" }}
-                              {{if and (not (strings.Contains .Title "newsletter")) (not (strings.Contains .Title "timeline")) }}
+                              {{if and (not (strings.Contains .Title "newsletter")) (not (strings.Contains .Title "timeline")) (not (strings.Contains .Title "app-defaults")) (not (strings.Contains .Title "change-log")) (not (strings.Contains .Title "video")) }}
                                 <a href='{{ .Permalink }}'>{{ .Title }}</a><br/>
                               {{ end }}
                             {{ end }}
