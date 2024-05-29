@@ -2046,3 +2046,8 @@ input, select, textarea {
 		#footer .copyright a {
 			color: inherit;
 		}
+
+
+:root {
+            color-scheme: dark;
+          }
