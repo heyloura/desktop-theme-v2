@@ -3160,3 +3160,7 @@ display: none;
     max-width: 100%;
     width: unset;
 }
+
+:root {
+            color-scheme: dark;
+          }
