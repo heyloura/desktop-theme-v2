@@ -90,7 +90,7 @@
                 
                             <menu>
                 <li style='margin-bottom: 1em;'><a class='golden' href='/'>{{ .Site.Title }}</a></li>
-                <li class='avatar-li'><img class='avatar' style='image-rendering: pixelated;' height='125' src='https://heyloura.com/uploads/2024/3a04add34b.png'><br/><small>Lvl {{ len ((where .Site.Pages 'Type' 'post').GroupByDate '2006' )}} Indie Webmaster</small></li>
+                <li class='avatar-li'><img class='avatar' style='image-rendering: pixelated;' height='125' src='https://heyloura.com/uploads/2024/3a04add34b.png'><br/><small>Lvl {{ len ((where .Site.Pages "Type" "post").GroupByDate "2006" )}} Indie Webmaster</small></li>
                 <!--<li><a href='/'>🏰 Home</a></li>
                 <li><a href='/about'>📜 Sheet</a></li>
                 <li><a href='/now'>💰 Inventory</a></li>-->
