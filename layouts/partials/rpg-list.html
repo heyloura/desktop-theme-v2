@@ -91,11 +91,11 @@
                             <menu>
                 <li style='margin-bottom: 1em;'><a class='golden' href='/'>{{ .Site.Title }}</a></li>
                 <li class='avatar-li'><img class='avatar' style='image-rendering: pixelated;' height='125' src='https://heyloura.com/uploads/2024/3a04add34b.png'><br/><small>Lvl {{ len ((where .Site.Pages "Type" "post").GroupByDate "2006" )}} Indie Webmaster</small></li>
-                <li><a href='/photos'>🔮 Photos</a></li>
-                <li><a href='/reading'>📚 Library</a></li>
-                <li><a href='/bookmarks'>🔖 Saved</a></li>
-                <li><a href='/archive'>🏛️ Archive</a></li>
-                <li><a href='/search-space'>🔎 Search</a></li>
+                <li><a target='_top' href='/photos'>🔮 Photos</a></li>
+                <li><a target='_top' href='/reading'>📚 Library</a></li>
+                <li><a target='_top' href='/bookmarks'>🔖 Saved</a></li>
+                <li><a target='_top' href='/archive'>🏛️ Archive</a></li>
+                <li><a target='_top' href='/search-space'>🔎 Search</a></li>
                             </menu>
                 <aside class='frame quests'>
                                     <header>
@@ -107,7 +107,7 @@
                     {{ if gt (len $list) 0 }}
                             {{ range sort $list "Title" }}
                               {{if and (not (strings.Contains .Title "newsletter")) (not (strings.Contains .Title "timeline")) (not (strings.Contains .Title "app defaults")) (not (strings.Contains .Title "change log")) (not (strings.Contains .Title "video")) }}
-                                <a href='{{ .Permalink }}'>{{ .Title }}</a><br/>
+                                <a target='_top' href='{{ .Permalink }}'>{{ .Title }}</a><br/>
                               {{ end }}
                             {{ end }}
                     {{ end }}
@@ -164,9 +164,9 @@
             <p>I’m a senior web developer doing non-profit work in juvenile justice, a tai chi teacher, and a home/public school mom to a couple of wonderful children.</p>
             <h3>Current Quests</h3>
             <div>
-                👩‍💻<a style='padding:0 0.5em;' href='https://heyloura.com/categories/code/'>Coding</a>
-                ☯️<a style='padding:0 0.5em;' href='https://heyloura.com/categories/tai-chi/'>Tai Chi</a>
-                🐸<a target='_blank' style='padding:0 0.5em;' href='https://lillihub.com/'>Lillihub <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-arrow-up-right' viewBox='0 0 16 16'>
+                👩‍💻<a target='_top' style='padding:0 0.5em;' href='https://heyloura.com/categories/code/'>Coding</a>
+                ☯️<a target='_top' style='padding:0 0.5em;' href='https://heyloura.com/categories/tai-chi/'>Tai Chi</a>
+                🐸<a target='_top' target='_blank' style='padding:0 0.5em;' href='https://lillihub.com/'>Lillihub <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-arrow-up-right' viewBox='0 0 16 16'>
 <path fill-rule='evenodd' d='M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z'/>
 </svg></a>
             </div>
@@ -188,12 +188,12 @@
         <header>
             <a style='display:none;' class='p-author h-card' href='http://heyloura.com'>Loura</a>
             {{ if .Title }}
-            <h2><a class='u-url p-name' href='{{ .Permalink }}'>{{ .Title }}</a></h2>
+            <h2><a target='_top' class='u-url p-name' href='{{ .Permalink }}'>{{ .Title }}</a></h2>
             <time datetime='{{ .Date.Format "2006-01-02 15:04:05 -0700" }}' class='dt-published'>
               {{ .Date.Format "2 January 2006" }}
             </time>
             {{ else }}
-            <h2><a href='{{ .Permalink }}' class='u-url'>
+            <h2><a target='_top' href='{{ .Permalink }}' class='u-url'>
                 <time class='dt-published' datetime='{{ .Date.Format "2006-01-02 15:04:05 -0700" }}' >
                     {{ .Date.Format "2 January 2006" }}
                 </time>
@@ -204,7 +204,7 @@
              {{ if or .Title .Truncated }}
                {{ .Summary }}
                {{ if .Truncated }}
-               <p><a href='{{ .RelPermalink }}'>Read More</a></p>
+               <p><a target='_top' href='{{ .RelPermalink }}'>Read More</a></p>
                {{ end }}
              {{ else }}
                {{ .Content }}
@@ -214,7 +214,7 @@
     <p style='text-align:right;'>
      {{- if .Page.Params.categories -}}
       {{- range $index, $category := .Page.Params.categories -}}
-       <a style='text-decoration:none;' class='subheading' href='/categories/{{ $category | anchorize }}/'>#{{ $category }}</a>
+       <a target='_top' style='text-decoration:none;' class='subheading' href='/categories/{{ $category | anchorize }}/'>#{{ $category }}</a>
       {{- end -}}
     {{- end -}}
     </p>
@@ -247,12 +247,12 @@
 {{ $pag := $.Paginator }}
 <nav class='paginator'>
 	{{ if $pag.HasPrev }}
-	<a style='float: left;' rel='prev' href='{{ $pag.Prev.URL }}' title='Previous Page'>
+	<a target='_top' style='float: left;' rel='prev' href='{{ $pag.Prev.URL }}' title='Previous Page'>
 		← Newer Posts
 	</a>
 	{{ end }}
 	{{ if $pag.HasNext }}
-	<a style='float: right;' rel='next' href='{{ $pag.Next.URL }}'>
+	<a target='_top' style='float: right;' rel='next' href='{{ $pag.Next.URL }}'>
 		Older Posts →
 	</a>
 	{{ end }}
@@ -272,12 +272,12 @@
                 <header><h3>Indieweb</h3></header>
 <hr style='clear:both'>
                 <p>
-                    <a href='https://xn--sr8hvo.ws/%F0%9F%91%8D%F0%9F%93%8A%F0%9F%92%85/previous'>⬅️</a>
-                    <a href='https://xn--sr8hvo.ws'>IndieWeb 🕸️💍</a>
-                    <a href='https://xn--sr8hvo.ws/%F0%9F%91%8D%F0%9F%93%8A%F0%9F%92%85/next'>➡️</a>
+                    <a target='_blank' href='https://xn--sr8hvo.ws/%F0%9F%91%8D%F0%9F%93%8A%F0%9F%92%85/previous'>⬅️</a>
+                    <a target='_blank' href='https://xn--sr8hvo.ws'>IndieWeb 🕸️💍</a>
+                    <a target='_blank' href='https://xn--sr8hvo.ws/%F0%9F%91%8D%F0%9F%93%8A%F0%9F%92%85/next'>➡️</a>
                 </p>
                 <p>
-                    <a href='https://indieweb.org/'>
+                    <a target='_blank' href='https://indieweb.org/'>
                         <img src='https://heyloura.com/uploads/2022/4af033892a.png' height='25' alt='IndieWebCamp' style='image-rendering:pixelated;'>
                     </a>
                 </p>
@@ -291,13 +291,13 @@
                 <header><h3>WWW & Fediverse</h3></header>
 <hr style='clear:both'>
                 <p>
-                    <a href='https://micro.blog/heyloura'><img style='image-rendering: pixelated;' height='32' src='https://heyloura.com/uploads/2022/1eb5b77d81.png' alt='microblog website icon'></a>               
-                    <a href='https://heyloura.com/feed.xml'><img style='image-rendering: pixelated;' height='32' src='https://heyloura.com/uploads/2022/e29d8fe9f3.png' alt='rss feed'></a>
-<a href='https://github.com/heyloura'><img style='image-rendering: pixelated;' height='32' src='https://heyloura.com/uploads/2023/icons8-github-30.png' alt='github link'></a>
+                    <a target='_blank' href='https://micro.blog/heyloura'><img style='image-rendering: pixelated;' height='32' src='https://heyloura.com/uploads/2022/1eb5b77d81.png' alt='microblog website icon'></a>               
+                    <a target='_blank' href='https://heyloura.com/feed.xml'><img style='image-rendering: pixelated;' height='32' src='https://heyloura.com/uploads/2022/e29d8fe9f3.png' alt='rss feed'></a>
+<a target='_blank' href='https://github.com/heyloura'><img style='image-rendering: pixelated;' height='32' src='https://heyloura.com/uploads/2023/icons8-github-30.png' alt='github link'></a>
                 </p>
                 <p><img style='vertical-align:middle; image-rendering: pixelated;border:none;' height='32' src='https://heyloura.com/uploads/2022/f02dbee17f.png' alt='activity pub' /> <small><a href='https://micro.blog/heyloura?remote_follow=1' target='_blank'>@heyloura@heyloura.com</a></small></p>
-<p><a href='mailto:me@loura@hey.com' rel='me'>loura@hey.com</a></p>
-<p><a href='https://heyloura.com/' class='h-card' rel='me'>Loura</a></p>
+<p><a target='_blank' href='mailto:me@loura@hey.com' rel='me'>loura@hey.com</a></p>
+<p><a target='_blank' href='https://heyloura.com/' class='h-card' rel='me'>Loura</a></p>
             </aside>
 
 
