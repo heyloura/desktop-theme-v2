@@ -2707,3 +2707,7 @@ input, select, textarea {
 .featured {
 max-width: 600px;
 }
+
+:root {
+            color-scheme: dark;
+          }
