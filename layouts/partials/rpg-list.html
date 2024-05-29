@@ -177,9 +177,70 @@
     </div>
 </header>
 
+<section class='h-feed' style='grid-area: content;'>
+    <h2 style='margin-top:2em;'>📜 Adventure Log</h2> 
+    
+    {{ range (.Paginate (where .Site.Pages "Type" "post") 10).Pages.GroupByDate "January 2, 2006" }}
+    <article class='h-entry frame-golden-2'>
+    <h3>{{ .Key }}</h3> 
+    {{ range .Pages.Reverse }}
+    <p><a style='display:none;' class='p-author h-card' href='http://heyloura.com'>Loura</a><a href='{{ .Permalink }}' class='u-url'>
+            <time class='dt-published' datetime='{{ .Date.Format '2006-01-02 15:04:05 -0700' }}' >
+                {{ .Date.Format "3:04 PM" }}
+            </time>
+        </a></p>
+    <div class='e-content frame-grey'>
+    <h2>{{ .Title }}</h2>
+     {{ .Content }}
+    
+    <p style='text-align:right; font-weight:bold;' data-id='{{ .RelPermalink }}'></p>
+    <p style='text-align:right;'>
+     {{- if .Page.Params.categories -}}
+      {{- range $index, $category := .Page.Params.categories -}}
+       <a style='text-decoration:none;' class='subheading' href='/categories/{{ $category | anchorize }}/'>#{{ $category }}</a>
+      {{- end -}}
+    {{- end -}}
+    </p>
+    </div>
+    <script>
+      fetch('https://micro.blog/conversation.js?format=jsonfeed&url=https%3A%2F%2Fheyloura.com' + encodeURIComponent('{{ .RelPermalink }}'))
+      .then(response => response.json())
+      .then(conversation => {
+        const repliesLink = document.querySelector('[data-id='{{ .RelPermalink }}']');
+        if(conversation.items.length > 0) {
+            let postA = document.createElement('a');
+            postA.setAttribute('href', '{{ .RelPermalink }}#conversation');
+            postA.innerHTML = '💬' + conversation.items.length;
+            repliesLink.prepend(postA);
+            //repliesLink.innerText = '💬' + conversation.items.length;
+        } else {
+            repliesLink.remove()
+        }
+      })
+      .catch((error) => {
+        // TODO: nothing for now…
+      });
+    </script>
+    {{ end }}
+    </article>
+    {{ end }}
 
+{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 10) }}
+<nav class="paginator">
+	{{ if $paginator.HasPrev }}
+	<a style="float: left;" rel="prev" href="{{ $paginator.Prev.URL }}" title="Previous Page">
+		← Newer Posts
+	</a>
+	{{ end }}
+	{{ if $paginator.HasNext }}
+	<a style="float: right;" rel="next" href="{{ $paginator.Next.URL }}">
+		Older Posts →
+	</a>
+	{{ end }}
+</nav>
+	
 
-
+</section>
 
 	
 </div>
