@@ -106,7 +106,7 @@
                     {{ $list := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
                     {{ if gt (len $list) 0 }}
                             {{ range sort $list "Title" }}
-                              {{if and (not (strings.Contains .Title "newsletter")) (not (strings.Contains .Title "timeline")) (not (strings.Contains .Title "app-defaults")) (not (strings.Contains .Title "change-log")) (not (strings.Contains .Title "video")) }}
+                              {{if and (not (strings.Contains .Title "newsletter")) (not (strings.Contains .Title "timeline")) (not (strings.Contains .Title "app defaults")) (not (strings.Contains .Title "change log")) (not (strings.Contains .Title "video")) }}
                                 <a href='{{ .Permalink }}'>{{ .Title }}</a><br/>
                               {{ end }}
                             {{ end }}
