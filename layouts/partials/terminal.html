@@ -1,0 +1,11 @@
+<datalist id="posts" class="h-feed">
+{{ $list := (where .Site.Pages "Type" "post") }}
+{{ range $list.Reverse }}
+      <option class="h-entry" data-content="{{ .Summary }}" data-title="{{.Title}}" data-date="{{ .Date.Format "2 Jan 2006" }}" data-permalink="{{ .Permalink }}" data-category="{{- if .Page.Params.categories -}}{{- range $index, $category := .Page.Params.categories -}}{{$category}},{{end}}{{end}}">
+        <a href="{{ .Permalink }}" class="u-url"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time></a>
+      </option>
+{{end}}
+</datalist>
+
+<div id="dialog" title="terminal"><div id="content"></div></div>
+<script src="/js/terminal.js"></script>
