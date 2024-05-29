@@ -120,7 +120,7 @@
                 
                 <div class='level-bars'>
                     {{ $posts := where site.RegularPages "Type" "post" }}
-                    {{ $microPostsCount := float ( len ( where $posts ".Params.title"  "=' nil )) }}
+                    {{ $microPostsCount := float ( len ( where $posts ".Params.title"  "=" nil )) }}
                     {{ $titlePostsCount := float ( len ( where $posts ".Params.title"  "!=" nil )) }}
                     
                     {{ $scratch := newScratch }}
