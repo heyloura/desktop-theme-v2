@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {{ partial "head.html" . }}
+
+  <body class="language-markup">
+    <main>
+        <nav>{{ partial "nav.html" . }}</nav>
+        {{ partial "sticker.html" . }}
+   
+    </main>
+    {{ partial "terminal.html" . }}  
+    {{ block "main" . }}{{ end }}
+
+    
+
+<script>
+let images = document.querySelectorAll('.terminal__prompt--contents img');
+for (let i = 0; i < images.length; i++) {
+  let image = images[i];
+  image.setAttribute('width', '');
+  image.setAttribute('height', '');
+}
+let videos = document.querySelectorAll('.terminal__prompt--contents video');
+for (let i = 0; i < videos.length; i++) {
+  let video = videos[i];
+  video.setAttribute('width', '');
+  video.setAttribute('height', '');
+}
+</script>
+<script>
+  window.Prism = window.Prism || {};
+  window.Prism.manual = true;
+</script>
+
+<script src="/js/prism.js"></script>
+
+<script>
+  $(function() {
+    // Wrap the code inside the required <code> tag, when needed:
+    $('pre').each(function() {
+      if (1 !== $(this).children('code').length) {
+        $(this).wrapInner('<code>');
+      }
+      if(!$(this).attr('class') || $(this).attr('class').indexOf('language-') !== 1)
+      {
+          $(this).addClass('language-html');
+      }
+    });
+
+    Prism.highlightAll()
+  });
+</script>
+<script src='https://tinylytics.app/embed/ty-z3nCjHzz9nhTen2UU.js?hits&webring=avatar&kudos=👍' defer></script>
+  </body>
+
+</html>
