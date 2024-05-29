@@ -1,0 +1,251 @@
+<iframe style="width:100%;height:99%;border:0;" srcdoc="
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Right Sidebar - Escape Velocity by HTML5 UP</title>
+		<meta charset='utf-8' />
+		<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+		<link rel='stylesheet' href='/css/escape.css' />
+<link rel='stylesheet' href='/css/prism.css'>
+        <style>
+           .microblog_reply_form, .microblog_post {
+                padding-top:2em;
+                margin-top:2em;
+                border-top: solid 2px #e5e5e5;
+           }
+.microblog_avatar {
+  width: 4em !important;
+height: 4em !important;
+  max-width: 4em !important;
+max-height: 4em !important;
+float: left;
+    margin: 0 1.5em 1.5em 0 !important;
+    position: relative;
+    top: 0.5em;
+}
+.microblog_fullname {
+font-weight: bold;
+}
+
+.bookshelf {
+list-style:none;
+}
+.bookshelf li div {
+display: flex;
+}
+
+.bookshelf__cover {
+ width: 4em !important;
+  max-width: 4em !important;
+float: left;
+    margin: 0 1.5em 1.5em 0 !important;
+    position: relative;
+    top: 0.5em;
+}
+
+.bookshelf__by, .bookshelf__author {
+display: none;
+}
+        </style>
+	</head>
+	<body class='right-sidebar is-preload'>
+		<div id='page-wrapper'>
+
+			<!-- Header -->
+				<section id='header' class='wrapper'>
+
+					<!-- Logo -->
+						<div id='logo'>
+							<h1><a href='/categories/code'>Hey Loura!</a></h1>
+							<p>Sometimes I blog about code.</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id='nav'>
+							<ul><li>
+                                        <a class='icon solid fa-cog' href='/categories/code/'> <span>Code</span></a>
+                                   </li>
+									<li class='current'>
+                                          <a class='icon solid fa-home' href='/categories/homeschooling/'> <span>Homeschooling</span></a>
+                                    </li>
+									<li>
+                                         <a class='icon solid fa-frog' href='/categories/lillihub/'> <span>Lillihub</span></a>
+                                    </li>
+                                    <li>
+										<a href='/categories/productivity/' class='icon fa-chart-bar'> <span>Productivity</span></a>
+									</li>
+									<li>
+                                        <a class='icon solid fa-retweet' href='/categories/tai-chi/'> <span>Tai Chi</span></a>
+                                     </li></ul>
+						</nav>
+
+				</section>
+
+			<!-- Main -->
+				<section id='main' class='wrapper style2'>
+					<div class='title'>Enjoy the post</div>
+					<div class='container'>
+						<div class='row gtr-150'>
+							<div class='col-8 col-12-medium'>
+
+								<!-- Content -->
+									<div id='content'>
+
+<article class='box post h-entry'>
+<header class='style1'>
+<a style='display:none;' class='p-author h-card' href='http://heyloura.com'>Loura</a>
+												<h2>{{ if .Title }}<a class='u-url p-name' href='{{ .Permalink }}'>{{ .Title }}</a>{{ else }} <a href='{{ .Permalink }}' class='u-url'><span class='post-meta'><time class='dt-published' datetime='{{ .Date.Format "2006-01-02 15:04:05 -0700" }}'>{{ .Date.Format "Jan 2, 2006" }}</time></span></a> {{ end }}</h2>
+											</header>
+	<div class='e-content'>
+
+           {{ replace .Content '"' "'" }}
+
+</div>
+
+<script type='text/javascript' src='https://micro.blog/conversation.js?url={{ .Permalink }}'></script>
+										</article>
+
+
+
+</nav>
+
+									</div>
+
+							</div>
+							<div class='col-4 col-12-medium'>
+
+								<!-- Sidebar -->
+									<div id='sidebar'>
+										<section class='box'>
+											<header>
+												<h2>Hello Everyone 👋</h2>
+											</header>
+											<p>I'm Loura and I like being creative with code. The day job deals mostly with C# and SQL.</p>
+										</section>
+										<section class='box'>
+											<header>
+												<h2>Photos?</h2>
+											</header>
+											{{- $list := where .Pages ".Params.photos" "!=" nil -}}
+	{{- $len := (len $list) -}}
+
+	<div class='photos-grid-container' style='display: grid; grid-column-gap: 15px; grid-row-gap: 15px; grid-template-columns: 33% 33% 33%;'>
+
+	{{ range $index, $value := $list }}
+		<a href='{{ .Permalink }}'>
+			{{ range first 1 .Params.photos }}
+				<img src='{{ . }}' width='300' height='300' style='border-radius: 5px; max-width: 100%; height: auto;' class='photos-grid-item' loading='lazy' />
+			{{ end }}
+		</a>
+	{{ end }}
+										</section>
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Highlights -->
+				<section id='highlights' class='wrapper style3'>
+					<div class='title'>Projects</div>
+					<div class='container'>
+						<div class='row aln-center'>
+							<div class='col-4 col-12-medium'>
+								<section class='highlight'>
+									<a href='#' class='image featured'><img src='https://heyloura.com/uploads/2023/lillihub-512.png' ></a>
+									<h3><a href='https://lillihub.com'>Lillihub</a></h3>
+<p>A delightful Micro.blog client. Browse the timeline and manage your posts, bookmarks and books. Lillihub also supports other premium Micro.blog features like notes.
+												</p>
+									<ul class='actions'>
+										<li><a href='https://lillihub.com' class='button style1' target='_top'>Jump on over 🐸</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class='col-4 col-12-medium'>
+								<section class='highlight'>
+									<a href='#' class='image featured'><img src='images/pic03.jpg' alt='' /></a>
+									<h3><a href='#'>Coming Soon</a></h3>
+									<p>What project will I think of next?</p>
+									<!--<ul class='actions'>
+										<li><a href='#' class='button style1'>Learn More</a></li>
+									</ul>-->
+								</section>
+							</div>
+							<div class='col-4 col-12-medium'>
+								<section class='highlight'>
+									<a href='#' class='image featured'><img src='images/pic04.jpg' alt='' /></a>
+									<h3><a href='#'>Coming Soon</a></h3>
+									<p>What project will I think of next?</p>
+									<!--<ul class='actions'>
+										<li><a href='#' class='button style1'>Learn More</a></li>
+									</ul>-->
+								</section>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<section id='footer' class='wrapper'>
+					<div class='title'>The End</div>
+					<div class='container'>
+<footer>
+<p style='text-align:center;'><b>Get in contact</b>: send an email hello@heyloura.com, find me on <a href='https://micro.blog/heyloura' target='_blank'>micro.blog</a>, or at <a href='https://micro.blog/heyloura?remote_follow=1' target='_blank'>@heyloura@heyloura.com</a></p>
+</footer>
+						<div id='copyright'>
+<ul class='links'>
+							<li>© heyloura.com. All rights reserved.</li><li>Design: <a href='http://html5up.net'>HTML5 UP</a></li>      
+<li><i class='fa-solid fa-square-rss'></i> <a href='https://heyloura.com/feed.xml' target='_top'>all posts</a></li>
+<li><i class='fa-solid fa-square-rss'></i> <a href='https://heyloura.com/categories/code/feed.xml' target='_top'>code posts</a></li>
+							<li>🕸️💍 <a style='text-decoration:none;' href='https://xn--sr8hvo.ws/%F0%9F%91%8D%F0%9F%93%8A%F0%9F%92%85/previous'>←</a>
+                    <a href='https://xn--sr8hvo.ws'>IndieWeb</a>
+                    <a style='text-decoration:none;' href='https://xn--sr8hvo.ws/%F0%9F%91%8D%F0%9F%93%8A%F0%9F%92%85/next'>→</a></li>     
+<li>website analytics via <a target='_blank' href='https://tinylytics.app/public/k8W9_T_FtwGM-5zeSNC7'>tinylytics.app</a></li>
+						</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src='/js/jquery.min.js'></script>
+			<script src='/js/jquery.dropotron.min.js'></script>
+			<script src='/js/browser.min.js'></script>
+			<script src='/js/breakpoints.min.js'></script>
+			<script src='/js/util.js'></script>
+			<script src='/js/escape.js'></script>
+            <script>$('#content img').addClass('image featured');$('#page-wrapper a').attr('target','_top');</script>
+<script>
+  window.Prism = window.Prism || {};
+  window.Prism.manual = true;
+</script>
+
+<script src='/js/prism.js'></script>
+
+<script>
+  $(function() {
+    // Wrap the code inside the required <code> tag, when needed:
+    $('pre').each(function() {
+      if (1 !== $(this).children('code').length) {
+        $(this).wrapInner('<code>');
+      }
+      if(!$(this).attr('class') || $(this).attr('class').indexOf('language-') !== 1)
+      {
+          $(this).addClass('language-html');
+      }
+    });
+
+    Prism.highlightAll()
+  });
+</script>
+
+	</body>
+</html>
+            "></iframe>
