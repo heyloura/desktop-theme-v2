@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div id="pageDialog" title="{{ .Title }}" class="h-feed post-content">
+
+{{ if in .Content "homeschooling" }}
+    {{ partial "homeschool.html" . }}
+{{ else if or (in .Content "lillihub") (in .Content "Lillihub") }}
+    {{ partial "lillihub.html" . }}
+{{ else }}
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+  </header>
+
+  <article class="post-content">
+    {{ .Content }}
+  </article>
+
+</div>
+{{ end }}
+
+</div>
+
+<script>
+$( "#pageDialog" ).dialog({ height: $(window).height() - 10, width: $(window).width() - 20 });
+</script>
+{{ end }}
