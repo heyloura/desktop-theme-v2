@@ -185,7 +185,7 @@
     <h3>{{ .Key }}</h3> 
     {{ range .Pages.Reverse }}
     <p><a style='display:none;' class='p-author h-card' href='http://heyloura.com'>Loura</a><a href='{{ .Permalink }}' class='u-url'>
-            <time class='dt-published' datetime='{{ .Date.Format '2006-01-02 15:04:05 -0700' }}' >
+            <time class='dt-published' datetime='{{ .Date.Format "2006-01-02 15:04:05 -0700" }}' >
                 {{ .Date.Format "3:04 PM" }}
             </time>
         </a></p>
