@@ -1,5 +1,15 @@
 {{ define "main" }}
-<div id="pageDialog" title="{{ if in .Page.Params.categories "homeschooling"  }}Hey Loura! Homeschooling{{ else if in .Page.Params.categories "lillihub"  }}Hey Loura! Lillihub{{end}}" class="h-feed post-content">
+<div id="pageDialog" title="{{ if in .Page.Params.categories "homeschooling"  }}
+    Hey Loura! Homeschooling
+    {{ else if in .Page.Params.categories "lillihub"  }}
+    Hey Loura! Lillihub
+    {{ else if in .Page.Params.categories "code"  }}
+    Hey Loura! Code
+    {{ else if in .Page.Params.categories "RPG"  }}
+    Hey Loura! RPG
+    {{ else }}
+    Hey Loura!
+    {{end}}" class="h-feed post-content">
 
 {{ if in .Page.Params.categories "homeschooling" }}
     {{ partial "homeschool.html" . }}
@@ -7,6 +17,8 @@
     {{ partial "code.html" . }}
 {{ else if in .Page.Params.categories "lillihub" }}
     {{ partial "lillihub.html" . }}
+{{ else if in .Page.Params.categories "RPG" }}
+    {{ partial "rpg" . }}
 {{ else }}
     {{ partial "code.html" . }}
 {{ end }}
