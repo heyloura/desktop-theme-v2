@@ -1,9 +1,20 @@
 {{ define "main" }}
 
-<div id="categoryDialog" title="{{ if eq .Title "homeschooling" }}Hey Loura! Homeschooling{{ else if eq .Title "lillihub" }}Hey Loura! Lillihub{{ else if eq .Title "code" }}Hey Loura! Code{{else}}Hey Loura!{{end}}" class="h-feed post-content">
+<div id="categoryDialog" title="{{ if eq .Title "homeschooling" }}
+   Hey Loura! Homeschooling
+   {{ else if eq .Title "lillihub" }}
+   Hey Loura! Lillihub
+   {{ else if eq .Title "code" }}
+   Hey Loura! Code
+   {{ else if eq .Title "rpg" }}
+   Hey Loura! RPG
+   {{else}}
+   Hey Loura!{{end}}" class="h-feed post-content">
 
 {{ if eq .Title "homeschooling" }}
    {{ partial "homeschool-list.html" . }}
+{{ else if eq .Title "code" }}
+   {{ partial "code-list.html" . }}
 {{ else if eq .Title "lillihub" }}
    {{ partial "lillihub-list.html" . }}
 {{ else if eq .Title "rpg" }}
