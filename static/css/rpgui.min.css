@@ -6,7 +6,7 @@
         body {
             background: var(--background);
             font-size:18px;
-            cursor: url(images/default.png), auto !important;
+            cursor: url(/images//default.png), auto !important;
             font-family: Consolas, monaco, monospace;     
             height: 100vh;  
             margin: 0;
@@ -14,10 +14,10 @@
             color: #000000;
         }
 		button {
-			cursor: url(images/point.png), auto !important;
+			cursor: url(/images//point.png), auto !important;
 		}
         a {
-            cursor: url(images/point.png), auto !important;
+            cursor: url(/images//point.png), auto !important;
             color: var(--link-color);
             font-weight: bold;
             text-shadow:-2px 0 #000,0 2px #000,2px 0 #000,0 -2px #000;
@@ -78,7 +78,7 @@ box-sizing: border-box;
             border-style:solid;
             background-clip:padding-box;
             background-origin:padding-box;
-            border-image-source:url(images/b5f2040012.png);
+            border-image-source:url(/images//b5f2040012.png);
             border-image-slice:8 8 8 8;
             -moz-box-sizing:border-box;
             -webkit-box-sizing:border-box;
@@ -94,11 +94,11 @@ box-sizing: border-box;
             border-style:solid;
             background-clip:padding-box;
             background-origin:padding-box;
-            border-image-source:url(images/border-image-golden2.png);
+            border-image-source:url(/images//border-image-golden2.png);
             border-image-slice:8 8 8 8;
             -moz-box-sizing:border-box;
             -webkit-box-sizing:border-box;
-            background:url(images/background-image-golden2.png) center;
+            background:url(/images//background-image-golden2.png) center;
             background-clip:padding-box;
             background-origin:padding-box;
         }
@@ -110,11 +110,11 @@ box-sizing: border-box;
             border-image-repeat:repeat;
             padding:12px;
             border-style:solid;
-            border-image-source:url(images/border-image-golden.png);
+            border-image-source:url(/images//border-image-golden.png);
             border-image-slice:4 4 4 4;
             -moz-box-sizing:border-box;
             -webkit-box-sizing:border-box;
-            background:url(images/background-image-golden.png) center;
+            background:url(/images//background-image-golden.png) center;
             background-clip:padding-box;
             background-origin:padding-box;
         }
@@ -122,7 +122,7 @@ box-sizing: border-box;
             image-rendering: pixelated;
             position:relative;
             border-style:solid;
-            border-image-source:url(images/border-image-grey.png);
+            border-image-source:url(/images//border-image-grey.png);
             border-image-repeat:repeat;
             border-image-slice:3 3 3 3;
             border-image-width:7px;
@@ -131,7 +131,7 @@ box-sizing: border-box;
             box-sizing:border-box;
             -moz-box-sizing:border-box;
             -webkit-box-sizing:border-box;
-            background:url(images/background-image-grey.png) center;
+            background:url(/images//background-image-grey.png) center;
             background-clip:padding-box;
             background-origin:padding-box;
 		    color: white;
@@ -139,7 +139,7 @@ box-sizing: border-box;
         .frame, .microblog_post, #search-space-form  {
             image-rendering: pixelated;
             border-style:solid;
-            border-image-source:url(images/border-image.png);
+            border-image-source:url(/images//border-image.png);
             border-image-repeat:repeat;
             border-image-slice:6 6 6 6;
             border-image-width:18px;
@@ -148,7 +148,7 @@ box-sizing: border-box;
             box-sizing:border-box;
             -moz-box-sizing:border-box;
             -webkit-box-sizing:border-box;
-            background:url(images/background-image.png) center;
+            background:url(/images//background-image.png) center;
             background-clip:padding-box;
             background-origin:padding-box
         }
@@ -182,7 +182,7 @@ width:auto;
             text-decoration: none;
             background-clip: padding-box;
             background-origin: padding-box;
-            background:url(images/button.png) center no-repeat no-repeat;
+            background:url(/images//button.png) center no-repeat no-repeat;
             background-size: 100% 100%;
             border: none;
             height: 50px;
@@ -190,7 +190,7 @@ width:auto;
             line-height: 50px;
         }
         nav menu li a.golden, #search-space-form > p:nth-child(1) > button:nth-child(3) {
-            background: url(images/button-golden.png) center no-repeat no-repeat;
+            background: url(/images//button-golden.png) center no-repeat no-repeat;
     		background-clip: padding-box;
     		background-origin: padding-box;
     		background-size: 100% 80%;
@@ -215,7 +215,7 @@ display: block;
   margin: 0px auto;
 }
 		nav menu li a.golden:before, #search-space-form > p:nth-child(1) > button:nth-child(3):before  {
-   			 background: url(images/button-golden-left.png) right center no-repeat;
+   			 background: url(/images//button-golden-left.png) right center no-repeat;
    			 background-size: 100% 100%;
     		margin: -5% 0 0 -46px;
    			 left: 0;
@@ -227,7 +227,7 @@ display: block;
     		height: 110%;
 		}
 		nav menu li a.golden:after, #search-space-form > p:nth-child(1) > button:nth-child(3):after {
-   			 background: url(images/button-golden-right.png) left center no-repeat;
+   			 background: url(/images//button-golden-right.png) left center no-repeat;
     		background-size: 100% 100%;
    			 margin: -5% -46px 0 0;
     		right: 0;
@@ -242,7 +242,7 @@ display: block;
             color: #fff;
         }
         .golden-button {
-              background: url(images/button-golden.png) center no-repeat no-repeat;
+              background: url(/images//button-golden.png) center no-repeat no-repeat;
               background-clip: padding-box;
               background-origin: padding-box;
               background-size: 100% 80%;
@@ -261,7 +261,7 @@ display: block;
               text-decoration: none;
         }
         .golden-button:before {
-              background: url(images/button-golden-left.png) right center no-repeat;
+              background: url(/images//button-golden-left.png) right center no-repeat;
               background-size: 100% 100%;
               margin: -5% 0 0 -46px;
               left: 0;
@@ -275,23 +275,23 @@ display: block;
               height: 110%;
         }
         .golden-button:after {
-              background: url(images/button-golden-right.png) left center no-repeat;
+              background: url(/images//button-golden-right.png) left center no-repeat;
               background-size: 100% 100%;
               margin: -5% -46px 0 0;
               right: 0;
               float: right;
         }
         nav menu li a:hover, button:hover {
-            background-image: url(images/button-hover.png);
+            background-image: url(/images//button-hover.png);
         }
         nav menu li a:active, button:active {
-            background-image: url(images/button-down.png);
+            background-image: url(/images//button-down.png);
         }
         nav menu li a.golden:hover {
-            background-image: url(images/button-golden-hover.png);
+            background-image: url(/images//button-golden-hover.png);
         }
         nav menu li a.golden:active {
-            background-image: url(images/button-golden-down.png);
+            background-image: url(/images//button-golden-down.png);
         }
         header img {
             border: none;
@@ -300,17 +300,17 @@ display: block;
             width:18px
         }
         ::-webkit-scrollbar-track, ::-webkit-scrollbar-track {
-            background-image:url(images/scrollbar-track.png);
+            background-image:url(/images//scrollbar-track.png);
             background-size:18px 60px;
             background-repeat:repeat-y
         }
         ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb {
-            background-image:url(images/scrollbar-thumb.png);
+            background-image:url(/images//scrollbar-thumb.png);
             background-size:100% 100%;
             background-repeat:no-repeat
         }
         ::-webkit-scrollbar-button, ::-webkit-scrollbar-button{
-            background-image:url(images/scrollbar-button.png);
+            background-image:url(/images//scrollbar-button.png);
             background-size:100% 100%;
             background-repeat:no-repeat
         }
@@ -360,7 +360,7 @@ max-width: 525px;
 		display: block;
    		 border: 0;
     	height: 10px;
-    	background: url(images/hr.png) top left repeat-x;
+    	background: url(/images//hr.png) top left repeat-x;
 	}
       .bottom-frames {
          	 	display: grid;
@@ -438,7 +438,7 @@ font-size: 1em;
                 text-decoration: none;
                 background-clip: padding-box;
                 background-origin: padding-box;
-                background:url(images/button.png) center no-repeat no-repeat;
+                background:url(/images//button.png) center no-repeat no-repeat;
                 background-size: 100% 100%;
                 border: none;
                 min-width: 140px;
@@ -501,17 +501,17 @@ font-size: 1em;
     height: 42px;
     left: 40px;
     right: 40px;
-    background-image: url(images/progress-bar-track.png);
+    background-image: url(/images//progress-bar-track.png);
 }
 .rpgui-progress-fill.red {
-    background-image: url(images/progress-red.png);
+    background-image: url(/images//progress-red.png);
 }
 .rpgui-progress-fill {
     top: 9px;
     bottom: 8px;
     left: 0;
     width: 100%;
-    background-image: url(images/progress.png);
+    background-image: url(/images//progress.png);
 }
 .rpgui-progress-fill, .rpgui-progress-track {
     position: absolute;
@@ -520,7 +520,7 @@ font-size: 1em;
 }
 .rpgui-progress-left-edge {
     left: 0;
-    background-image: url(images/progress-bar-left.png);
+    background-image: url(/images//progress-bar-left.png);
 }
 
 .rpgui-progress-left-edge, .rpgui-progress-right-edge {
@@ -532,7 +532,7 @@ font-size: 1em;
 
 .rpgui-progress-right-edge {
     right: 0;
-    background-image: url(images/progress-bar-right.png);
+    background-image: url(/images//progress-bar-right.png);
 }
 
 .rpgui-progress-left-edge, .rpgui-progress-right-edge {
@@ -543,29 +543,29 @@ font-size: 1em;
 }
 
 .rpgui-progress-fill.blue {
-    background-image: url(images/progress-blue.png);
+    background-image: url(/images//progress-blue.png);
 }
 
 .rpgui-progress-fill.green {
-    background-image: url(images/progress-green.png);
+    background-image: url(/images//progress-green.png);
 }
 .rpgui-progress-fill {
-    background-image: url(images/progress.png);
+    background-image: url(/images//progress.png);
 }
 .rpgui-icon.sword {
-    background-image: url(images/sword.png);
+    background-image: url(/images//sword.png);
 }
 .rpgui-icon.shield {
-    background-image: url(images/shield.png);
+    background-image: url(/images//shield.png);
 }
 .rpgui-icon.potion-red {
-    background-image: url(images/potion-red.png);
+    background-image: url(/images//potion-red.png);
 }
 .rpgui-icon.potion-green {
-    background-image: url(images/potion-green.png);
+    background-image: url(/images//potion-green.png);
 }
 .rpgui-icon.potion-blue {
-    background-image: url(images/potion-blue.png);
+    background-image: url(/images//potion-blue.png);
 }
 .rpgui-icon {
     display: inline-block;
