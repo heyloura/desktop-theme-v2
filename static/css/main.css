@@ -288,3 +288,7 @@ img, video {
      overflow-wrap: anywhere;
     max-width: 100% !important;
 }
+
+.photos-grid-container > a[href="https://heyloura.com/2023/07/12/a-basic-framed.html"] {
+  display:none;
+}
