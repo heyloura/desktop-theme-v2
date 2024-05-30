@@ -120,7 +120,7 @@ This year was tough. But I like to think that even with all bumps we had some fu
 
 {{ $pag := $.Paginator }}
 
-<nav id='post-nav'>
+<div id='post-nav'>
     {{ if $pag.HasPrev }}
         <span class='prev'>
 			<a class='button solid' href='{{ $pag.Prev.URL }}' title='Previous Page'>
@@ -135,7 +135,7 @@ This year was tough. But I like to think that even with all bumps we had some fu
             </a>
         </span>
     {{ end }}
-</nav>
+</div>
 									
 
 								</div>
@@ -279,5 +279,5 @@ This year was tough. But I like to think that even with all bumps we had some fu
 			<script src='/js/breakpoints.min.js'></script>
 			<script src='/js/util.js'></script>
 			<script src='/js/strongly.js'></script>
-            <script>$('#content img').addClass('image featured');$('#page-wrapper a').attr('target','_top');</script>
+            <script>$('#content img').addClass('image featured');</script>
 					</div>
