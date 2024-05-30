@@ -34,7 +34,7 @@
 	{{ range $index, $value := $list }}
 
 {{- $perma := .Permalink -}}
-{{- $date := .Date .Format "2 January 2006" -}}
+{{- $date := .Date.Format "2 January 2006" -}}
 <article class='thumb'>
 		
 			{{ range first 1 .Params.photos }}
