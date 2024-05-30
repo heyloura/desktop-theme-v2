@@ -55,7 +55,7 @@
                                                 {{ if .Title }}<li><time datetime='{{ .Date.Format "2006-01-02 15:04:05 -0700" }}' class='dt-published'>
       {{ .Date.Format "2 January 2006" }}
     </time></li>{{ end }}
-												{{ if .Title }}<li><a href='{{ .Permalink }}' class='button icon solid fa-file'>Continue Reading</a></li> {{ end }}
+	{{ if .Title }}<li><a href='{{ .Permalink }}' class='button icon solid fa-file'> Continue Reading</a></li> {{ end }}
 											</ul>
 										</article>
 
@@ -106,6 +106,19 @@
 												</p>
 												<a href='https://lillihub-docs.micro.blog/' class='button alt'>Visit Documentation</a>
 											</section>
+
+									<section class="box">
+											<header>
+												<h2 class='major'>Other things I sometimes blog about</h2>
+											</header>
+											  <ul>
+  	 <li><a href="/categories/homeschooling/"> <span>Homeschooling</span></a></li>
+  	 <li><a href="/categories/lillihub/"> <span>Lillihub</span></a></li>
+     <li><a href="/categories/productivity/"> <span>Productivity</span></a></li>
+     <li><a href="/categories/rpg/"> <span>RPG</span></a></li>
+  	 <li><a href="/categories/tai-chi/"> <span>Tai Chi</span></a></li>
+  </ul>
+										</section>
 
 								</div>
 							</div>
