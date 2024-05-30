@@ -80,7 +80,7 @@ $( function() {
                         ' <white class="command">help</white>\t\tDisplay this menu',
                         ' <white class="command">joke</white>\t\tTell me a joke',
                         ' <white class="command">ls</white>\t\t\tDisplay files and folders',
-                        ' <white class="command">messenger</white>\t\tRun messenger app',
+                        ' <white class="command">messenger</white>\tRun messenger app',
                         ' <white class="command">photos</white>\t\tRun photo app',
                         ' <white class="command">open</white>\t\tOpen a file',
                         ''
