@@ -1982,7 +1982,7 @@ input, select, textarea {
 			.wrapper .title:before {
 				content: '';
 				position: absolute;
-				bottom: -38px;
+				bottom: -26px;
 				left: -35px;
 				width: 35px;
 				height: 38px;
@@ -1996,7 +1996,7 @@ input, select, textarea {
 				transform: scaleX(-1);
 				content: '';
 				position: absolute;
-				bottom: -38px;
+				bottom: -26px;
 				right: -35px;
 				width: 35px;
 				height: 38px;
@@ -2868,7 +2868,7 @@ input, select, textarea {
 
 					.wrapper .title:before, .wrapper .title:after {
 						height: 15px;
-						bottom: -15px;
+						bottom: -8px;
 						background-size: 100% 100%;
 					}
 
