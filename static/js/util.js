@@ -15,7 +15,7 @@
 			var	$this = $(this),
 				indent = Math.max(0, $this.parents('li').length - 1),
 				href = $this.attr('href'),
-				target = '_blank';
+				target = '';
 
 			b.push(
 				'<a ' +
