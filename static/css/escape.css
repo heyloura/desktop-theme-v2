@@ -102,7 +102,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 400;
-		color: #919499;
+		color: #919499 !important;
 		font-size: 14pt;
 		line-height: 1.75em;
 		letter-spacing: 0.025em;
@@ -110,7 +110,7 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 700;
-		color: #484d55;
+		color: #484d55 !important;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -124,7 +124,7 @@ input, select, textarea {
 		-ms-transition: color .25s ease-in-out;
 		transition: color .25s ease-in-out;
 		text-decoration: underline;
-		color: #717479;
+		color: #717479 !important;
 	}
 
 		a:hover {
@@ -133,7 +133,7 @@ input, select, textarea {
 
 	strong, b {
 		font-weight: 700;
-		color: #484d55;
+		color: #484d55 !important;
 	}
 
 	blockquote {
@@ -1466,7 +1466,7 @@ input, select, textarea {
 		}
 
 		header.style1 p {
-			color: #b1b4b9;
+			color: #b1b4b9 !important;
 			display: block;
 			margin: 1.15em 0 0 0;
 			font-size: 1.3em;
@@ -1500,7 +1500,7 @@ input, select, textarea {
 
 			table.default thead {
 				background: #484d55;
-				color: #fff;
+				color: #fff !important;
 			}
 
 			table.default tfoot {
@@ -1512,7 +1512,7 @@ input, select, textarea {
 	form label {
 		display: block;
 		font-weight: 700;
-		color: #484d55;
+		color: #484d55 !important;
 		margin: 0.25em 0 0.5em 0;
 	}
 
@@ -1657,7 +1657,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #f98780;
+			background-color: #f98780 !important;
 		}
 
 		input[type="button"].large,
@@ -1675,7 +1675,7 @@ input, select, textarea {
 		button.style1,
 		.button.style1 {
 			background: #e97770 url("/images/overlay.png");
-			color: #fff;
+			color: #fff !important;
 		}
 
 			input[type="button"].style1:hover,
@@ -1683,7 +1683,7 @@ input, select, textarea {
 			input[type="reset"].style1:hover,
 			button.style1:hover,
 			.button.style1:hover {
-				background-color: #f98780;
+				background-color: #f98780 !important;
 			}
 
 			input[type="button"].style1:active,
@@ -1700,7 +1700,7 @@ input, select, textarea {
 		button.style2,
 		.button.style2 {
 			background: none;
-			color: #606167;
+			color: #606167 !important;
 			box-shadow: inset 0px 0px 2px 0px #a0a1a7;
 		}
 
@@ -1726,7 +1726,7 @@ input, select, textarea {
 		button.style3,
 		.button.style3 {
 			background: #2f333b url("/images/overlay.png");
-			color: #fff;
+			color: #fff !important;
 		}
 
 			input[type="button"].style3:hover,
