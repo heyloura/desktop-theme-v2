@@ -67,7 +67,7 @@
 
 {{ $pag := $.Paginator }}
 
-<nav id='post-nav'>
+<div id='post-nav'>
     {{ if $pag.HasPrev }}
         <span class='prev'>
 			<a class='button style2' href='{{ $pag.Prev.URL }}' title='Previous Page'>
@@ -82,7 +82,7 @@
             </a>
         </span>
     {{ end }}
-</nav>
+</div>
 
 									</div>
 
