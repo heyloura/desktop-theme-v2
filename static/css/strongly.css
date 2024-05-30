@@ -102,7 +102,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro';
 		font-weight: 300;
-		color: #777;
+		color: #777 !important;
 		line-height: 1.65em;
 		font-size: 15pt;
 	}
@@ -110,7 +110,7 @@ input, select, textarea {
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 600;
 		text-transform: uppercase;
-		color: #888;
+		color: #888 !important;
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -138,7 +138,7 @@ input, select, textarea {
 		-webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		-ms-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-		color: #666;
+		color: #666 !important;
 		text-decoration: none;
 		border-bottom: solid 1px #ddd;
 	}
@@ -151,17 +151,17 @@ input, select, textarea {
 		}
 
 		a:hover {
-			color: #ed786a;
+			color: #ed786a !important;
 			border-bottom-color: rgba(255, 255, 255, 0);
 		}
 
 			a:hover strong {
-				color: #ed786a;
+				color: #ed786a !important;
 			}
 
 	strong, b {
 		font-weight: 600;
-		color: #666;
+		color: #666 !important;
 	}
 
 	em, i {
@@ -1637,7 +1637,7 @@ input, select, textarea {
 				display: block;
 				font-size: 0.8em;
 				background: #878787;
-				color: #e4e4e4;
+				color: #e4e4e4 !important;
 				width: 2em;
 				height: 2em;
 				border-radius: 2em;
@@ -1659,7 +1659,7 @@ input, select, textarea {
 	form label {
 		font-weight: 600;
 		text-transform: uppercase;
-		color: #888;
+		color: #888 !important;
 		display: block;
 		margin: 0 0 1em 0;
 	}
@@ -1743,7 +1743,7 @@ input, select, textarea {
 
 		table thead {
 			background: #878787;
-			color: #fff;
+			color: #fff !important;
 			font-weight: 400;
 			text-transform: uppercase;
 			border: 0;
@@ -1845,7 +1845,7 @@ input, select, textarea {
 
 	.box.excerpt .date {
 		background: #878787;
-		color: #fff;
+		color: #fff !important;
 		font-weight: 400;
 		text-transform: uppercase;
 		border-radius: 4px;
@@ -1919,7 +1919,7 @@ input, select, textarea {
 		#header h1 {
 			font-family: 'Arvo';
 			font-weight: 700;
-			color: #ed786a;
+			color: #ed786a !important;
 			text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
 			font-size: 3em;
 			letter-spacing: 13px;
@@ -1932,7 +1932,7 @@ input, select, textarea {
 		#header p {
 			text-transform: uppercase;
 			font-weight: 400;
-			color: #888;
+			color: #888 !important;
 			margin: 2.5em 0 0 0;
 			font-size: 0.85em;
 			letter-spacing: 3px;
@@ -1963,7 +1963,7 @@ input, select, textarea {
 				text-decoration: none;
 				text-transform: uppercase;
 				font-weight: 400;
-				color: #777;
+				color: #777 !important;
 				outline: 0;
 				display: block;
 			}
@@ -1971,7 +1971,7 @@ input, select, textarea {
 				#nav > ul > li > a:before {
 					display: inline-block;
 					background: #878787;
-					color: #e4e4e4;
+					color: #e4e4e4 !important;
 					width: 2.25em;
 					font-size: 0.8em;
 					height: 2.25em;
@@ -2004,12 +2004,12 @@ input, select, textarea {
 			#nav > ul > li.active > a:before,
 			#nav > ul > li:hover > a:before {
 				background: #ED786A;
-				color: #fff;
+				color: #fff !important;
 			}
 
 			#nav > ul > li.active > a > span,
 			#nav > ul > li:hover > a > span {
-				color: #ED786A;
+				color: #ED786A !important;
 			}
 
 	.dropotron {
@@ -2076,7 +2076,7 @@ input, select, textarea {
 				-webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 				-ms-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 				transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-				color: #ed786a;
+				color: #ed786a !important;
 			}
 
 /* Features */
@@ -2103,7 +2103,7 @@ input, select, textarea {
 		position: relative;
 		overflow: hidden;
 		background: #fff;
-		color: #fff;
+		color: #fff !important;
 		text-align: center;
 		border-top: solid 2px #e5e5e5;
 		border-bottom: solid 2px #e5e5e5;
@@ -2430,7 +2430,7 @@ input, select, textarea {
 						text-align: center;
 						line-height: 40px;
 						font-size: 18px;
-						color: #aaa;
+						color: #aaa !important;
 					}
 
 					#titleBar .toggle:active:before {
@@ -2462,14 +2462,14 @@ input, select, textarea {
 				border-right: solid 2px #3c3c3c;
 				font-weight: 400;
 				text-transform: uppercase;
-				color: #888;
+				color: #888 !important;
 				letter-spacing: 2px;
 				font-size: 0.85em;
 			}
 
 				#navPanel .link {
 					display: block;
-					color: #ddd;
+					color: #ddd !important;
 					text-decoration: none;
 					height: 44px;
 					line-height: 44px;
@@ -2484,7 +2484,7 @@ input, select, textarea {
 
 					#navPanel .link.depth-0 {
 						font-weight: 600;
-						color: #fff;
+						color: #fff !important; 
 					}
 
 				#navPanel .indent-1 {
@@ -2513,7 +2513,7 @@ input, select, textarea {
 				}
 
 				#navPanel .depth-0 {
-					color: #fff;
+					color: #fff !important;
 				}
 
 			body.navPanel-visible #page-wrapper {
