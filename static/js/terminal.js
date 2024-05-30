@@ -64,7 +64,7 @@ $( function() {
 
             function print_dirs() {
                 term.echo(dirs.map(dir => {
-                    return `${dirs.includes('.html') || dirs.includes('.exe') ? '' : 'DIR'}\t<SkyBlue class="directory">${dir}</SkyBlue>`;
+                    return `${dir.includes('.html') || dir.includes('.exe') ? '' : 'DIR'}\t<SkyBlue class="directory">${dir}</SkyBlue>`;
                 }).join('\n'));
             }
 
@@ -74,12 +74,15 @@ $( function() {
                         '',
                         'Commands are case-sensitive',
                         '',
-                        ' cd\t\t\tMove inside a folder. Needs name or ..',
-                        ' <white class="command">clear</white>\t\tClears the screen',
-                        ' <white class="command">credits</white>\tDisplays credits',
+                        ' cd\t\t\tMove inside a folder',
+                        ' <white class="command">clear</white>\t\tClear the screen',
+                        ' <white class="command">credits</white>\tDisplay credits',
                         ' <white class="command">help</white>\t\tDisplay this menu',
-                        ' <white class="command">ls</white>\t\t\tDisplays files and folders',
-' <white class="command">open</white>\t\tOpens a file',
+                        ' <white class="command">joke</white>\t\tTell me a joke',
+                        ' <white class="command">ls</white>\t\t\tDisplay files and folders',
+                        ' <white class="command">messenger</white>\t\tRun messenger app',
+                        ' <white class="command">photos</white>\t\tRun photo app',
+                        ' <white class="command">open</white>\t\tOpen a file',
                         ''
                     ].join('\n');
 
