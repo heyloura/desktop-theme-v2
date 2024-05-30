@@ -1,18 +1,6 @@
-<iframe style="width:100%;height:99%;border:0;" srcdoc="
-       <!DOCTYPE HTML>
-<!--
-	Strongly Typed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Strongly Typed by HTML5 UP</title>
-		<meta charset='utf-8' />
-		<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
-		<link rel='stylesheet' href='/css/strongly.css' />
-<link rel='stylesheet' href='/css/prism.css'>
-	</head>
+
+	<link rel='stylesheet' href='/css/strongly.css' />
+	<div class="strongly-scope">
 	<body class='homepage is-preload'>
 		<div id='page-wrapper'>
 
@@ -31,8 +19,8 @@
   	 <li class='current'><a class='icon solid fa-home' href='/categories/homeschooling/'> <span>Homeschooling</span></a></li>
   	 <li><a class='icon solid fa-frog' href='/categories/lillihub/'> <span>Lillihub</span></a></li>
      <li><a href='/categories/productivity/' class='icon fa-chart-bar'> <span>Productivity</span></a></li>
-     <li><a href='/categories/rpg/' class='icon fa-shield'> <span>RPG</span></a></li>
-  	 <li><a class='icon solid fa-retweet' href='/categories/tai-chi/'> <span>Tai Chi</span></a></li>
+     <li><a href='/categories/rpg/' class='icon fa-heart'> <span>RPG</span></a></li>
+  	 <li><a class='icon solid fa-yin-yang' href='/categories/tai-chi/'> <span>Tai Chi</span></a></li>
   </ul>
 </nav>
 
@@ -116,7 +104,7 @@ This year was tough. But I like to think that even with all bumps we had some fu
 											
 <div class='e-content'>
 
-           {{ replace .Content '"' "'" }}
+           {{ .Content }}
 
 </div>
 											<ul class='actions'>
@@ -194,6 +182,24 @@ This year was tough. But I like to think that even with all bumps we had some fu
 														</article>
 
 												</li>
+												<li style='clear:both' >
+
+													<!-- Highlight -->
+														<article style='clear:both' class='box highlight'>
+															<header>
+																<h3>Other things I blog about</h3>
+															</header>
+  <ul>
+     <li ><a href='/categories/code/'> <span>Code</span></a></li>
+  	 <li ><a href='/categories/homeschooling/'> <span>Homeschooling</span></a></li>
+  	 <li><a href='/categories/lillihub/'> <span>Lillihub</span></a></li>
+     <li><a href='/categories/productivity/'> <span>Productivity</span></a></li>
+     <li><a href='/categories/rpg/' > <span>RPG</span></a></li>
+  	 <li><a href='/categories/tai-chi/'> <span>Tai Chi</span></a></li>
+  </ul>
+														</article>
+
+												</li>
 											</ul>
 										</section>
 
@@ -268,37 +274,10 @@ This year was tough. But I like to think that even with all bumps we had some fu
 		</div>
 
 		<!-- Scripts -->
-			<script src='/js/jquery.min.js'></script>
 			<script src='/js/jquery.dropotron.min.js'></script>
 			<script src='/js/browser.min.js'></script>
 			<script src='/js/breakpoints.min.js'></script>
 			<script src='/js/util.js'></script>
 			<script src='/js/strongly.js'></script>
             <script>$('#content img').addClass('image featured');$('#page-wrapper a').attr('target','_top');</script>
-<script>
-  window.Prism = window.Prism || {};
-  window.Prism.manual = true;
-</script>
-
-<script src='/js/prism.js'></script>
-
-<script>
-  $(function() {
-    // Wrap the code inside the required <code> tag, when needed:
-    $('pre').each(function() {
-      if (1 !== $(this).children('code').length) {
-        $(this).wrapInner('<code>');
-      }
-      if(!$(this).attr('class') || $(this).attr('class').indexOf('language-') !== 1)
-      {
-          $(this).addClass('language-html');
-      }
-    });
-
-    Prism.highlightAll()
-  });
-</script>
-
-	</body>
-</html>
-            "></iframe>
+					</div>
