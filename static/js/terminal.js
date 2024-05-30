@@ -199,6 +199,12 @@ $( function() {
 
                     term.echo(message, { keepWords: true });
                 },
+                messenger() {
+                    window.location.href = 'https://heyloura.com/messenger';
+                },
+                photos() {
+                    window.location.href = 'https://heyloura.com/photos';
+                },
                 open(blog = null) {
                     if (blog === null) {
                         this.error('No file specified.');
@@ -275,7 +281,7 @@ $( function() {
 
             term.on('click', '.directory', function() {
                 const dir = $(this).text();
-                if(dir.includes('.html') || dir.includes(.exe)) {
+                if(dir.includes('.html') || dir.includes('.exe')) {
                    window.location.href = 'https://heyloura.com/' + dir.split('.')[0];
                 } else {
                    term.exec(`cd ~/${dir}`, { typing: true, delay: 50 });
