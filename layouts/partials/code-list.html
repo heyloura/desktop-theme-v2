@@ -95,24 +95,17 @@
 											<header>
 												<h2>Hello Everyone 👋</h2>
 											</header>
-											<p>I'm Loura and I like being creative with code. The day job deals mostly with C# and SQL.</p>
+											<p>I'm Loura and I like being creative with code. The day job deals mostly with C# and SQL. Which can sometimes be boring.
+											So I like to experiment with the front-end. This website being a prime example. 
+											</p>
 										</section>
 										<section class='box'>
 											<header>
-												<h2>Photos?</h2>
+												<h2>Code & Things</h2>
 											</header>
-											{{- $list := where .Pages ".Params.photos" "!=" nil -}}
-	{{- $len := (len $list) -}}
-
-	<div class='photos-grid-container' style='display: grid; grid-column-gap: 15px; grid-row-gap: 15px; grid-template-columns: 33% 33% 33%;'>
-
-	{{ range $index, $value := $list }}
-		<a href='{{ .Permalink }}'>
-			{{ range first 1 .Params.photos }}
-				<img src='{{ . }}' width='300' height='300' style='border-radius: 5px; max-width: 100%; height: auto;' class='photos-grid-item' loading='lazy' />
-			{{ end }}
-		</a>
-	{{ end }}
+                                                                                        <ul>
+												<li><a target="_blank" href="https://github.com/heyloura">Github</a></li>
+											</ul>
 										</section>
 									</div>
 
@@ -191,5 +184,5 @@
 			<script src='/js/breakpoints.min.js'></script>
 			<script src='/js/util.js'></script>
 			<script src='/js/escape.js'></script>
-            <script>$('#content img').addClass('image featured');$('#page-wrapper a').attr('target','_top');</script>
+            <script>$('#content img').addClass('image featured');</script>
 </div>
