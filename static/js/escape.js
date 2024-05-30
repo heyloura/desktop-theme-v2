@@ -44,23 +44,6 @@
 				.appendTo($('#categoryDialog'));
 
 		// Panel.
-			$(
-				'<div id="navPanel">' +
-					'<nav>' +
-						$('#nav').navList() +
-					'</nav>' +
-				'</div>'
-			)
-				.appendTo($('#categoryDialog'))
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'left',
-					target: $('#categoryDialog'),
-					visibleClass: 'navPanel-visible'
-				});
+
 
 })(jQuery);
