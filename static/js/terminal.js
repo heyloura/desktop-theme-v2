@@ -48,50 +48,6 @@ $( function() {
                 'productivity.html': [],
                 'rpg.html': [],
                 'tai-chi.html': [],
-                //projects: [
-               //     '',
-                //    '<white>Open Source projects</white>',
-                //    [
-                 //       ['jQuery Terminal',
-                 //       'https://terminal.jcubic.pl',
-                 //       'library that adds terminal interface to websites'
-                 //       ],
-                //        ['LIPS Scheme','https://lips.js.org', 'Scheme implementation in JavaScript'],
-                 //       ['Sysend.js','https://jcu.bi/sysend', 'Communication between open tabs'],
-                 //       ['Wayne','https://jcu.bi/wayne', 'Pure in browser HTTP requests'],
-                //    ].map(([name, url, description = '']) => {
-                 //       return `* <a href="${url}">${name}</a> — <white>${description}</white>`;
-                 //   }),
-                 //   ''
-                //].flat(),
-                //skills: [
-                //    '',
-                //    '<white>languages</white>',
-//
-                //    [
-                //        'JavaScript',
-                //        'TypeScript',
-                //        'Python',
-                 //       'SQL',
-                 //       'PHP',
-                  //      'Bash'
-                   // ].map(lang => `* <yellow>${lang}</yellow>`),
-                  //  '',
-                  //  '<white>libraries</white>',
-                 //   [
-                  //      'React.js',
-                  //      'Redux',
-                   //     'Jest',
-                   // ].map(lib => `* <green>${lib}</green>`),
-                   // '',
-                    //'<white>tools</white>',
-                    //[
-                    //    'Docker',
-                    //    'git',
-                   //     'GNU/Linux'
-                   //].map(lib => `* <blue>${lib}</blue>`),
-                    //''
-               // ].flat()
             };
 
             const dirs = Object.keys(directories);
@@ -107,9 +63,8 @@ $( function() {
             }
 
             function print_dirs() {
-                term.echo('[[ub;white;]Date Modified]');
                 term.echo(dirs.map(dir => {
-                    return `\t<SkyBlue class="directory">${dir}</SkyBlue>`;
+                    return `${dirs.includes('.html') || dirs.includes('.exe') ? '' : 'DIR'}\t<SkyBlue class="directory">${dir}</SkyBlue>`;
                 }).join('\n'));
             }
 
