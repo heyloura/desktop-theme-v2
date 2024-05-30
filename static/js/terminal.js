@@ -275,7 +275,11 @@ $( function() {
 
             term.on('click', '.directory', function() {
                 const dir = $(this).text();
-                term.exec(`cd ~/${dir}`, { typing: true, delay: 50 });
+                if(dir.includes('.html') || dir.includes(.exe)) {
+                   window.location.href = 'https://heyloura.com/' + dir.split('.')[0];
+                } else {
+                   term.exec(`cd ~/${dir}`, { typing: true, delay: 50 });
+                }
             });
 
             function ready() {
