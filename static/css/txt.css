@@ -6,7 +6,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
+@scope (.txt-scope) {
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -3164,3 +3164,7 @@ display: none;
 :root {
             color-scheme: dark;
           }
+
+}
+
+.ui-widget-content { color: #919499 !important }
