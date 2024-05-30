@@ -48,7 +48,7 @@
 {{ if .Title }}
    {{ .Summary }}
 {{ else }}
-           {{ replace .Content '"' "'" }}
+           {{ .Content  }}
 {{ end }}
 </div>
 											<ul class='actions'>
