@@ -41,7 +41,7 @@
 					'<span class="title">' + $('#logo h1').html() + '</span>' +
 				'</div>'
 			)
-				.appendTo($body);
+				.appendTo($('#categoryDialog'));
 
 		// Panel.
 			$(
@@ -51,7 +51,7 @@
 					'</nav>' +
 				'</div>'
 			)
-				.appendTo($body)
+				.appendTo($('#categoryDialog'))
 				.panel({
 					delay: 500,
 					hideOnClick: true,
@@ -59,7 +59,7 @@
 					resetScroll: true,
 					resetForms: true,
 					side: 'left',
-					target: $body,
+					target: $('#categoryDialog'),
 					visibleClass: 'navPanel-visible'
 				});
 
