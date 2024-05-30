@@ -100,7 +100,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 400;
-		color: #6b7770;
+		color: #6b7770 !important;
 		font-size: 13pt;
 		line-height: 2em;
 	}
@@ -109,7 +109,7 @@ input, select, textarea {
 		font-family: 'Open Sans Condensed', sans-serif;
 		font-weight: 700;
 		text-transform: uppercase;
-		color: #6b7770;
+		color: #6b7770  !important;
 		margin: 0 0 0.5em 0;
 		line-height: 1.3;
 	}
@@ -145,7 +145,7 @@ input, select, textarea {
 	}
 
 	a {
-		color: #006376;
+		color: #006376 !important;
 		text-decoration: underline;
 	}
 
@@ -155,7 +155,7 @@ input, select, textarea {
 
 	b, strong {
 		font-weight: 700;
-		color: #6b7770;
+		color: #6b7770 !important;
 	}
 
 	i, em {
@@ -209,7 +209,7 @@ input, select, textarea {
 		font-family: 'Open Sans Condensed', sans-serif;
 		font-weight: 700;
 		text-transform: uppercase;
-		color: #c1cac5;
+		color: #c1cac5 !important;
 	}
 
 /* Container */
@@ -1793,7 +1793,7 @@ input, select, textarea {
 		text-transform: uppercase;
 		text-decoration: none;
 		background: #b1ddab;
-		color: #fff;
+		color: #fff !important;
 		border: 0;
 		line-height: 1em;
 		border-radius: 8px;
@@ -1952,7 +1952,7 @@ input, select, textarea {
 			}
 
 				ul.contact li a:before {
-					color: #f2f5f3;
+					color: #f2f5f3 !important;
 					font-size: 32px;
 					line-height: 48px;
 				}
@@ -1962,15 +1962,15 @@ input, select, textarea {
 			}
 
 				ul.contact li:hover a.fa-facebook {
-					background-color: #3C5A98;
+					background-color: #3C5A98 !important;
 				}
 
 				ul.contact li:hover a.fa-twitter {
-					background-color: #2DAAE4;
+					background-color: #2DAAE4 !important;
 				}
 
 				ul.contact li:hover a.fa-dribbble {
-					background-color: #C4376B;
+					background-color: #C4376B !important;
 				}
 
 				ul.contact li:hover a.fa-linkedin {
@@ -2028,7 +2028,7 @@ input, select, textarea {
 					height: 2.25em;
 					line-height: 2.175em;
 					font-size: 5em;
-					color: #fff;
+					color: #fff !important;
 				}
 
 			ul.special li:hover {
@@ -2043,7 +2043,7 @@ input, select, textarea {
 
 	ul.meta {
 		font-size: 0.85em;
-		color: #a1aaa5;
+		color: #a1aaa5 !important;
 		list-style: none;
 		padding-left: 0;
 	}
@@ -2098,7 +2098,7 @@ input, select, textarea {
 		font-family: 'Open Sans Condensed', sans-serif;
 		font-weight: 700;
 		text-transform: uppercase;
-		color: #6b7770;
+		color: #6b7770 !important;
 	}
 
 	form input[type="text"],
@@ -2183,12 +2183,12 @@ input, select, textarea {
 				font-family: 'Open Sans Condensed', sans-serif;
 				font-weight: 700;
 				text-transform: uppercase;
-				color: #6b7770;
+				color: #6b7770 !important;
 			}
 
 			table.default thead {
 				background: #E7EAE8;
-				color: #fff;
+				color: #fff !important;
 			}
 
 /* Box */
@@ -2334,7 +2334,7 @@ input, select, textarea {
 
 			#header .logo p {
 				display: inline;
-				color: #C1CAC5;
+				color: #C1CAC5 !important;
 			}
 
 /* Nav */
@@ -2344,9 +2344,6 @@ input, select, textarea {
 	}
 
 	#nav {
-		position: fixed;
-		top: 0;
-		left: 0;
 		z-index: 1000;
 		background-color: rgba(255, 255, 255, 0.95);
 		background-image: url("/images/overlay.png");
@@ -2389,7 +2386,7 @@ input, select, textarea {
 				position: relative;
 				display: block;
 				text-decoration: none;
-				color: #6b7770;
+				color: #6b7770 !important;
 				top: -6px;
 				padding: 6px 1.5em 0.25em 1.5em;
 				border-bottom-left-radius: 6px;
@@ -2403,23 +2400,23 @@ input, select, textarea {
 
 			#nav li:hover a, #nav li:hover span {
 				background: #C1CAC5;
-				color: #fff;
+				color: #fff !important;
 			}
 
 			#nav li.active a, #nav li.active span {
 				background: #C1CAC5;
-				color: #fff;
+				color: #fff !important;
 			}
 
 			#nav li.current a {
 				background: #b1ddab;
-				color: #fff;
+				color: #fff !important;
 			}
 
 	.dropotron {
 		list-style: none;
 		background: #6B7770;
-		color: #fff;
+		color: #fff !important;
 		border-radius: 6px;
 		line-height: 2.75em;
 		text-align: center;
@@ -2439,18 +2436,18 @@ input, select, textarea {
 
 			.dropotron li > a, .dropotron li > span {
 				display: block;
-				color: #D7DAD8;
+				color: #D7DAD8 !important;
 				text-decoration: none;
 				padding: 0 1.25em;
 			}
 
 			.dropotron li:hover > a, .dropotron li:hover > span {
-				color: #fff;
+				color: #fff !important;
 				background: #7B8780;
 			}
 
 			.dropotron li.active > a, .dropotron li.active > span {
-				color: #fff;
+				color: #fff !important;
 				background: #7B8780;
 			}
 
@@ -2488,7 +2485,7 @@ input, select, textarea {
 
 		#banner .content {
 			position: relative;
-			background-color: rgba(21, 28, 23, 0.85);
+			background-color: rgba(21, 28, 23, 0.85) !important;
 			background-image: url("/images/overlay.png"), url("/images/highlight.png");
 			background-position: top left, center center;
 			background-size: auto, 100% 250%;
@@ -2499,7 +2496,7 @@ input, select, textarea {
 		}
 
 			#banner .content h2 {
-				color: #fff;
+				color: #fff !important;
 				font-size: 2.75em;
 				margin: 0 0 0.5em 0;
 			}
@@ -2509,7 +2506,7 @@ input, select, textarea {
 				font-family: 'Open Sans Condensed', sans-serif;
 				font-weight: 700;
 				text-transform: uppercase;
-				color: #575d59;
+				color: #575d59 !important;
 				font-size: 1.35em;
 				margin: 0 0 1.25em 0;
 			}
@@ -2527,12 +2524,12 @@ input, select, textarea {
 			}
 
 				#banner .content .button:hover {
-					color: #e4e7e5;
+					color: #e4e7e5 !important;
 					border-color: rgba(87, 93, 89, 0.75);
 				}
 
 				#banner .content .button:active {
-					color: #fff;
+					color: #fff !important;
 					border-color: #616763;
 				}
 
@@ -2584,7 +2581,7 @@ input, select, textarea {
 		background: #e7eae8;
 		padding: 0.75em 2em 0.75em 2em;
 		border-radius: 8px;
-		color: #8b9790;
+		color: #8b9790 !important;
 		margin: 4em 0 0 0;
 	}
 
@@ -2597,7 +2594,7 @@ input, select, textarea {
 		}
 
 			#copyright .menu li {
-				border-color: #C1CAC5;
+				border-color: #C1CAC5 !important;
 				border-width: 2px;
 				line-height: 1em;
 			}
@@ -2789,7 +2786,7 @@ input, select, textarea {
 					text-transform: uppercase;
 					font-size: 1.25em;
 					line-height: 44px;
-					color: #fff;
+					color: #fff !important;
 					z-index: 1000;
 					text-align: center;
 				}
@@ -2827,14 +2824,14 @@ input, select, textarea {
 						width: 44px;
 						height: 44px;
 						content: '\f0c9';
-						color: #fff;
+						color: #fff !important;
 						text-align: center;
 						line-height: 44px;
 						font-size: 20px;
 					}
 
 					#titleBar .toggle:active:before {
-						background-color: #a1cd9b;
+						background-color: #a1cd9b !important;
 					}
 
 			#navPanel {
