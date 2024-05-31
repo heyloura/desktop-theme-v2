@@ -8,6 +8,8 @@
    Hey Loura! Code
    {{ else if eq .Title "rpg" }}
    Hey Loura! RPG
+   {{ else if eq .Title "tai chi" }}
+   Hey Loura! Tai Chi
    {{else}}
    Hey Loura!{{end}}" class="h-feed post-content">
 
@@ -19,6 +21,8 @@
    {{ partial "lillihub-list.html" . }}
 {{ else if eq .Title "RPG" }}
    {{ partial "rpg-list.html" . }}
+{{ else if eq .Title "tai chi" }}
+   {{ partial "taichi-list.html" . }}
 {{ else }}
     {{ partial "code-list.html" . }}
 {{end}}
