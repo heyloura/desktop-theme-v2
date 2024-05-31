@@ -7,7 +7,6 @@
         font-size: 1.25em;
     }</style>
 <div class="telephasic-scope">
-	<!--<body class='homepage'>-->
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -41,6 +40,174 @@
 				</div>
 
 			<!-- Features 1 -->
+
+<div class="wrapper">
+	<div class="container" id="main">
+		<div class="row gtr-150">
+			<div class="col-8 col-12-narrower">
+
+				<!-- Content -->
+					{{ $paginator := .Paginate (where .Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 7) }}
+	{{ range $paginator.Pages  }}
+
+<article class='box post h-entry'>
+											<header class='style1'>
+<a style='display:none;' class='p-author h-card' href='http://heyloura.com'>Loura</a>
+												<h2>{{ if .Title }}<a class='u-url p-name' href='{{ .Permalink }}'>{{ .Title }}</a>{{ else }} <a href='{{ .Permalink }}' class='u-url'><span class='post-meta'><time class='dt-published' datetime='{{ .Date.Format "2006-01-02 15:04:05 -0700" }}'>{{ .Date.Format "Jan 2, 2006" }}</time></span></a> {{ end }}</h2>
+											</header>
+											
+<div class='e-content'>
+{{ if .Title }}
+   {{ .Summary }}
+{{ else }}
+           {{ .Content }}
+{{ end }}
+</div>
+											<ul class='actions'>
+                                                {{ if .Title }}<li><time datetime='{{ .Date.Format "2006-01-02 15:04:05 -0700" }}' class='dt-published'>
+      {{ .Date.Format "2 January 2006" }}
+    </time></li>{{ end }}
+												{{ if .Title }}<li><a href='{{ .Permalink }}' class='button style1'>Continue Reading</a></li> {{ end }}
+											</ul>
+										</article>
+
+{{ end }}
+
+
+{{ $pag := $.Paginator }}
+
+<div id='post-nav'>
+    {{ if $pag.HasPrev }}
+        <span class='prev'>
+			<a class='button style2' href='{{ $pag.Prev.URL }}' title='Previous Page'>
+				<span class='arrow'>←</span> Newer Posts
+			</a>
+        </span>
+    {{ end }}
+    {{ if $pag.HasNext }}
+        <span class='next'>
+            <a class='button style2' href='{{ $pag.Next.URL }}'>
+                Older Posts <span class='arrow'>→</span>
+            </a>
+        </span>
+    {{ end }}
+</div>
+
+			</div>
+			<div class="col-4 col-12-narrower">
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+						<section>
+							<header>
+								<h3>Elit sed feugiat</h3>
+							</header>
+							<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur et vel
+							sem sit amet dolor neque semper magna. Lorem ipsum dolor sit amet consectetur et dolore
+							adipiscing elit. Curabitur vel sem sit.</p>
+							<ul class="actions">
+								<li><a href="#" class="button">Magna amet nullam</a></li>
+							</ul>
+						</section>
+						<section>
+							<a href="#" class="image featured"><img src="images/pic07.jpg" alt=""></a>
+							<header>
+								<h3>Commodo lorem varius</h3>
+							</header>
+							<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur et vel
+							sem sit amet dolor neque semper magna. Lorem ipsum dolor sit amet consectetur et dolore
+							adipiscing elit. Curabitur vel sem sit.</p>
+							<ul class="actions">
+								<li><a href="#" class="button">Ipsum sed dolor</a></li>
+							</ul>
+						</section>
+					</section>
+
+			</div>
+		</div>
+		<div class="row features">
+			<section class="col-4 col-12-narrower feature">
+				<div class="image-wrapper first">
+					<a href="#" class="image featured"><img src="images/pic03.jpg" alt=""></a>
+				</div>
+				<header>
+					<h3>Dolor sit consequat magna</h3>
+				</header>
+				<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
+				vel sem sit dolor neque semper magna lorem ipsum.</p>
+				<ul class="actions">
+					<li><a href="#" class="button">Elevate my awareness</a></li>
+				</ul>
+			</section>
+			<section class="col-4 col-12-narrower feature">
+				<div class="image-wrapper">
+					<a href="#" class="image featured"><img src="images/pic04.jpg" alt=""></a>
+				</div>
+				<header>
+					<h3>Dolor sit consequat magna</h3>
+				</header>
+				<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
+				vel sem sit dolor neque semper magna lorem ipsum.</p>
+				<ul class="actions">
+					<li><a href="#" class="button">Elevate my awareness</a></li>
+				</ul>
+			</section>
+			<section class="col-4 col-12-narrower feature">
+				<div class="image-wrapper">
+					<a href="#" class="image featured"><img src="images/pic05.jpg" alt=""></a>
+				</div>
+				<header>
+					<h3>Dolor sit consequat magna</h3>
+				</header>
+				<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
+				vel sem sit dolor neque semper magna lorem ipsum.</p>
+				<ul class="actions">
+					<li><a href="#" class="button">Elevate my awareness</a></li>
+				</ul>
+			</section>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
 				<div class="wrapper">
 					<div class="container">
 						<div class="row">
