@@ -5,6 +5,8 @@
     {{ partial "homeschool.html" . }}
 {{ else if or (in .Content "lillihub") (in .Content "Lillihub") }}
     {{ partial "lillihub.html" . }}
+{{ else if or (in .Content "tai chi") (in .Content "Tai Chi") }}
+    {{ partial "taichi" . }}
 {{ else }}
 <div class="post">
 
