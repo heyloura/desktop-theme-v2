@@ -24,7 +24,208 @@
 {{ else if in .Page.Params.categories "tai chi" }}
     {{ partial "taichi" . }}
 {{ else }}
-    {{ partial "messenger-single.html" . }}
+
+<style>
+.avatar {
+    background: #5755d9;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, .85);
+    display: inline-block;
+    font-size: .8rem;
+    font-weight: 300;
+    height: 1.6rem;
+    line-height: 1.25;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    width: 1.6rem;
+}
+.avatar img {
+    border-radius: 50%;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.avatar.avatar-lg {
+    font-size: 1.2rem;
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.chat {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.messages {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  border-radius: 20px;
+  padding: 8px 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.yours {
+  align-items: flex-start;
+}
+
+.yours .message {
+  margin-right: 25%;
+  background-color: #4D4D4D;
+  position: relative;
+}
+
+.yours .message.last:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: -7px;
+  height: 20px;
+  width: 20px;
+  background: #4D4D4D;
+  border-bottom-right-radius: 15px;
+}
+.yours .message.last:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: -10px;
+  width: 10px;
+  height: 20px;
+  background: rgba(0, 0, 0, 1);
+  border-bottom-right-radius: 10px;
+}
+
+.mine {
+  align-items: flex-end;
+}
+
+.mine .message {
+  color: white;
+  margin-left: 25%;
+  background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+  background-attachment: fixed;
+  position: relative;
+}
+
+.mine .reply .message {
+  color: white;
+  margin-left: 25%;
+  background: #4D4D4D;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.mine .message.last:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  right: -8px;
+  height: 20px;
+  width: 20px;
+  background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+  background-attachment: fixed;
+  border-bottom-left-radius: 15px;
+}
+
+.mine .reply .message.last:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  right: -8px;
+  height: 20px;
+  width: 20px;
+  background: #4D4D4D;
+  background-attachment: fixed;
+  border-bottom-left-radius: 15px;
+}
+
+.mine .message.last:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: -10px;
+  width: 10px;
+  height: 20px;
+  background: rgba(0, 0, 0, 1);
+  border-bottom-left-radius: 10px;
+}
+.noUnderline {
+ text-decoration: none;
+}
+               .microblog_reply_form, .microblog_post {
+                padding-top:2em;
+                margin-top:2em;
+                border-top: solid 2px #e5e5e5;
+           }
+.microblog_avatar {
+  width: 4em !important;
+height: 4em !important;
+  max-width: 4em !important;
+max-height: 4em !important;
+float: left;
+    margin: 0 1.5em 1.5em 0 !important;
+    position: relative;
+    top: 0.5em;
+}
+.microblog_fullname {
+font-weight: bold;
+}
+
+.bookshelf {
+list-style:none;
+}
+.bookshelf li div {
+display: flex;
+}
+
+.bookshelf__cover {
+ width: 4em !important;
+  max-width: 4em !important;
+float: left;
+    margin: 0 1.5em 1.5em 0 !important;
+    position: relative;
+    top: 0.5em;
+}
+
+.bookshelf__by, .bookshelf__author {
+display: none;
+}
+</style>
+    
+    <div class="chat h-feed">
+
+  <div class="mine messages h-entry">
+    <h2>{{ if .Title }}
+      <a class='u-url p-name' href='{{ .Permalink }}'>{{ .Title }}</a>{{ else }} <a href='{{ .Permalink }}' class='u-url'>
+      <span class='post-meta'><time class='dt-published' datetime='{{ .Date.Format "2006-01-02 15:04:05 -0700" }}'>{{ .Date.Format "Jan 2, 2006" }}</time></span></a> {{ end }}
+    </h2>
+    <div class="message last e-content">
+      {{ .Content }}
+    </div>
+  </div>
+
+<script type='text/javascript' src='https://micro.blog/conversation.js?url={{ .Permalink }}'></script>
+
+
+  </div>
+
+
+    
 {{ end }}
 
 
