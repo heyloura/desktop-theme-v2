@@ -10,8 +10,15 @@
 
 					<!-- Logo -->
 						<div id='logo'>
-							<h1><a href='/categories/code'>Hey Loura!</a></h1>
+							     {{- if in .Page.Params.categories "code"  -}}
+       <h1><a style="color: #fff;" href='/categories/code'>Hey Loura!</a></h1>
 							<p>Sometimes I blog about code.</p>
+							{{ else }}
+<h1><a style="color: #fff;" href='/categories/productivity'>Hey Loura!</a></h1>
+							<p>Sometimes I blog about productivity.</p>
+							
+      {{- end -}}
+							
 						</div>
 
 					<!-- Nav -->
@@ -95,9 +102,14 @@
 											<header>
 												<h2>Hello Everyone 👋</h2>
 											</header>
+											{{- if in .Page.Params.categories "code"  -}}
 											<p>I'm Loura and I like being creative with code. The day job deals mostly with C# and SQL. Which can sometimes be boring.
 											So I like to experiment with the front-end. This website being a prime example. 
 											</p>
+							{{ else }}
+							
+      {{- end -}}
+
 											<img class="image featured" src="https://micro.blog/heyloura/avatar.jpg?1717083879" />
 										</section>
 										<section class='box'>
