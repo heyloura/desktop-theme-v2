@@ -27,7 +27,7 @@
 
 {{ else }}
 <style>
-.avatar {
+.avatar, .microblog_user {
     background: #5755d9;
     border-radius: 50%;
     color: rgba(255, 255, 255, .85);
@@ -41,14 +41,14 @@
     vertical-align: middle;
     width: 1.6rem;
 }
-.avatar img {
+.avatar img, .microblog_user .microblog_avatar {
     border-radius: 50%;
     height: 100%;
     position: relative;
     width: 100%;
     z-index: 1;
 }
-.avatar.avatar-lg {
+.avatar.avatar-lg, .microblog_user .microblog_avatar {
     font-size: 1.2rem;
     height: 2.4rem;
     width: 2.4rem;
@@ -67,7 +67,7 @@
   flex-direction: column;
 }
 
-.message {
+.message, .microblog_text {
   border-radius: 20px;
   padding: 8px 15px;
   margin-top: 5px;
@@ -75,17 +75,17 @@
   display: inline-block;
 }
 
-.yours {
+.yours, .microblog_post {
   align-items: flex-start;
 }
 
-.yours .message {
+.yours .message, .microblog_post .microblog_text {
   margin-right: 25%;
   background-color: #4D4D4D;
   position: relative;
 }
 
-.yours .message.last:before {
+.yours .message.last:before, .microblog_post .microblog_text:before {
   content: "";
   position: absolute;
   z-index: 0;
@@ -96,7 +96,7 @@
   background: #4D4D4D;
   border-bottom-right-radius: 15px;
 }
-.yours .message.last:after {
+.yours .message.last:after, .microblog_post .microblog_text:after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -165,47 +165,7 @@
   background: rgba(0, 0, 0, 1);
   border-bottom-left-radius: 10px;
 }
-.noUnderline {
- text-decoration: none;
-}
-               .microblog_reply_form, .microblog_post {
-                padding-top:2em;
-                margin-top:2em;
-                border-top: solid 2px #e5e5e5;
-           }
-.microblog_avatar {
-  width: 4em !important;
-height: 4em !important;
-  max-width: 4em !important;
-max-height: 4em !important;
-float: left;
-    margin: 0 1.5em 1.5em 0 !important;
-    position: relative;
-    top: 0.5em;
-}
-.microblog_fullname {
-font-weight: bold;
-}
 
-.bookshelf {
-list-style:none;
-}
-.bookshelf li div {
-display: flex;
-}
-
-.bookshelf__cover {
- width: 4em !important;
-  max-width: 4em !important;
-float: left;
-    margin: 0 1.5em 1.5em 0 !important;
-    position: relative;
-    top: 0.5em;
-}
-
-.bookshelf__by, .bookshelf__author {
-display: none;
-}
 </style>
     
     <div class="chat h-feed">
