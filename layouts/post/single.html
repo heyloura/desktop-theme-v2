@@ -165,7 +165,9 @@
   background: rgba(0, 0, 0, 1);
   border-bottom-left-radius: 10px;
 }
-
+.microblog_post {
+display: none;
+}
     .microblog_reply_textarea {
  width: 100%;
     }
@@ -173,16 +175,20 @@
     
     <div class="chat h-feed">
 
-  <div class="mine messages h-entry">
+  <div class="mine messages h-entry" data-id="{{ .RelPermalink }}">
     <h2>{{ if .Title }}
-      <a class='u-url p-name' href='{{ .Permalink }}'>{{ .Title }}</a>{{ else }} <a href='{{ .Permalink }}' class='u-url'>
+      <a class='u-url p-name' href='{{ .Permalink }}'>{{ .Title }}</a><br/>
+        <span class='post-meta'><time class='dt-published' datetime='{{ .Date.Format "2006-01-02 15:04:05 -0700" }}'>{{ .Date.Format "Jan 2, 2006" }}</time></span>
+        {{ else }} <a href='{{ .Permalink }}' class='u-url'>
       <span class='post-meta'><time class='dt-published' datetime='{{ .Date.Format "2006-01-02 15:04:05 -0700" }}'>{{ .Date.Format "Jan 2, 2006" }}</time></span></a> {{ end }}
     </h2>
     <div class="message last e-content">
       {{ .Content }}
     </div>
   </div>
-
+<script>
+  getReplies('{{ .RelPermalink }}');
+</script>
 <script type='text/javascript' src='https://micro.blog/conversation.js?url={{ .Permalink }}'></script>
 
 
