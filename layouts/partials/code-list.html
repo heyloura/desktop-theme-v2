@@ -190,7 +190,13 @@
 <ul class='links'>
 							<li>© heyloura.com. All rights reserved.</li><li>Design: <a href='http://html5up.net'>HTML5 UP</a></li>      
 <li><i class='fa-solid fa-square-rss'></i> <a href='https://heyloura.com/feed.xml' target='_top'>all posts</a></li>
+	 {{- if in .Page.Params.categories "code"  -}}
 <li><i class='fa-solid fa-square-rss'></i> <a href='https://heyloura.com/categories/code/feed.xml' target='_top'>code posts</a></li>
+							{{ else }}
+<li><i class='fa-solid fa-square-rss'></i> <a href='https://heyloura.com/categories/productivity/feed.xml' target='_top'>productivity posts</a></li>
+							
+      {{- end -}}
+
 							<li>🕸️💍 <a style='text-decoration:none;' href='https://xn--sr8hvo.ws/%F0%9F%91%8D%F0%9F%93%8A%F0%9F%92%85/previous'>←</a>
                     <a href='https://xn--sr8hvo.ws'>IndieWeb</a>
                     <a style='text-decoration:none;' href='https://xn--sr8hvo.ws/%F0%9F%91%8D%F0%9F%93%8A%F0%9F%92%85/next'>→</a></li>     
