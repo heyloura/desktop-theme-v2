@@ -23,8 +23,9 @@
     {{ partial "rpg" . }}
 {{ else if in .Page.Params.categories "tai chi" }}
     {{ partial "taichi" . }}
-{{ else }}
+{{ else if eq .Title "Hey Loura!" }}
 
+{{ else }}
 <style>
 .avatar {
     background: #5755d9;
@@ -243,6 +244,7 @@ display: none;
     $( "#pageDialog" ).dialog({ height: $(window).height() - 10, width: $(window).width() - 20 });
 {{ else if in .Page.Params.categories "tai chi" }}
     $( "#pageDialog" ).dialog({ height: $(window).height() - 10, width: $(window).width() - 20 });
+{{ else if eq .Title "Hey Loura!" }}
 {{ else }}
     $( "#pageDialog" ).dialog({ height: $(window).width() <= 600 ?$(window).height() - 10 : $(window).height() / 1.25 , width: $(window).width() <= 600 ? $(window).width() - 20 : 600 });
 {{ end }}
