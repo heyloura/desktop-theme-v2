@@ -5,11 +5,11 @@ function getReplies(id) {
 	if(conversation.items.length > 0) {
         for(var i = conversation.items.length - 1; i >= 0; i--) {
            var convo = conversation.items[i];
-           console.log(convo);
+           //console.log(convo);
            let author = convo.author.name == 'Loura' ? '' : `<div>
                  <figure class="avatar avatar-lg">
                        <img src="${convo.author.avatar}" loading="lazy" height="48" width="48" /></figure> ${convo.author.name} 
- <a href="convo.author.url" class="noUnderline">🌐</a></div>`;
+ <a href="${convo.author.url}" class="noUnderline">🌐</a></div>`;
 
          let type = convo.author.name == 'Loura' ? 'mine reply' : 'yours';
 
