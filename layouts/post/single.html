@@ -7,6 +7,8 @@
     Hey Loura! Code
     {{ else if in .Page.Params.categories "RPG"  }}
     Hey Loura! RPG
+    {{ else if in .Page.Params.categories "tai chi"  }}
+    Hey Loura! Tai Chi
     {{ else }}
     Hey Loura!
     {{end}}" class="h-feed post-content">
@@ -19,6 +21,8 @@
     {{ partial "lillihub.html" . }}
 {{ else if in .Page.Params.categories "RPG" }}
     {{ partial "rpg" . }}
+{{ else if in .Page.Params.categories "tai chi" }}
+    {{ partial "taichi" . }}
 {{ else }}
     {{ partial "code.html" . }}
 {{ end }}
