@@ -233,6 +233,20 @@ display: none;
 </div>
 
 <script>
-$( "#pageDialog" ).dialog({ height: $(window).height() - 10, width: $(window).width() - 20 });
+{{ if in .Page.Params.categories "homeschooling" }}
+    $( "#pageDialog" ).dialog({ height: $(window).height() - 10, width: $(window).width() - 20 });
+{{ else if in .Page.Params.categories "code" }}
+    $( "#pageDialog" ).dialog({ height: $(window).height() - 10, width: $(window).width() - 20 });
+{{ else if in .Page.Params.categories "lillihub" }}
+    $( "#pageDialog" ).dialog({ height: $(window).height() - 10, width: $(window).width() - 20 });
+{{ else if in .Page.Params.categories "RPG" }}
+    $( "#pageDialog" ).dialog({ height: $(window).height() - 10, width: $(window).width() - 20 });
+{{ else if in .Page.Params.categories "tai chi" }}
+    $( "#pageDialog" ).dialog({ height: $(window).height() - 10, width: $(window).width() - 20 });
+{{ else }}
+    $( "#pageDialog" ).dialog({ height: $(window).width() <= 600 ?$(window).height() - 10 : $(window).height() / 1.25 , width: $(window).width() <= 600 ? $(window).width() - 20 : 600 });
+{{ end }}
+    
+
 </script>
 {{ end }}
