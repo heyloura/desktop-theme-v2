@@ -1,5 +1,6 @@
 :root {
             color-scheme: dark;
+            --background-alt: white;
           }
 body {
   background-image: url(/images/bc3d9891f2.jpg);
