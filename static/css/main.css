@@ -339,7 +339,7 @@ position: fixed;
 }
 
 @media screen and (max-width: 980px) {
-        .warning img {
+        .warning img, .my-clippy {
             display: none;
         }
     }
