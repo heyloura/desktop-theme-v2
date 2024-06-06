@@ -1,0 +1,136 @@
+{{ define "main" }}
+<style>
+.bookshelf {
+  padding: 0;
+  margin: 0;
+  list-style-type: none !important;
+}
+
+.bookshelf li {
+  margin: 0;
+  padding: 0;
+}
+
+.bookshelf li img.bookshelf__cover {
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 4/6;
+}
+
+h3.bookshelf__title {
+  margin: 0;
+  padding: 0;
+}
+
+/** 
+List: 
+**/
+
+.bookshelf.bookshelf--variant-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bookshelf--variant-list .bookshelf__item {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 0.5rem;
+}
+
+.bookshelf--variant-list img.bookshelf__cover.bookshelf__cover {
+  margin: 0;
+  padding: 0;
+  width: 5rem;
+  aspect-ratio: 4/6;
+}
+
+/**
+Grid:
+**/
+
+.bookshelf.bookshelf--variant-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 8rem));
+  justify-content: space-evenly;
+}
+
+.bookshelf--variant-grid .bookshelf__meta {
+  display: none;
+}
+
+.bookshelf--variant-grid .bookshelf__cover {
+  width: 100%;
+}</style>
+
+      <section class="h-feed">
+      <section>
+    <h3  style="margin-top:3em;" class="heading title">Currently Reading</h3> 
+<hr/>
+<ul  class="bookshelf bookshelf--variant-grid">
+  {{ range (index .Site.Data.bookshelves "currentlyreading") }}
+    <li>
+      <div class="bookshelf__item" title="{{ .title }} by {{ .author }}">
+        <a href="https://micro.blog/books/{{ .isbn }}">
+          <img class="bookshelf__cover" src="{{ .cover_url }}" />
+        </a>
+        <div class="bookshelf__meta">
+          <a href="https://micro.blog/books/{{ .isbn }}">
+            <h3 class="bookshelf__title">{{ .title }}</h3>
+          </a>
+          <span class="bookshelf__by">by</span>
+          <span class="bookshelf__author">{{ .author }}</span>
+        </div>
+      </div>
+    </li>
+  {{ end }}
+</ul> 
+
+
+
+<h3  style="margin-top:3em;" class="heading title">Finished in 2024</h3> 
+<hr/>
+<ul class="bookshelf bookshelf--variant-grid">
+  {{ range (index .Site.Data.bookshelves "finishedreading2024") }}
+    <li>
+      <div class="bookshelf__item" title="{{ .title }} by {{ .author }}">
+        <a href="https://micro.blog/books/{{ .isbn }}">
+          <img class="bookshelf__cover" src="{{ .cover_url }}" />
+        </a>
+        <div class="bookshelf__meta">
+          <a href="https://micro.blog/books/{{ .isbn }}">
+            <h3 class="bookshelf__title">{{ .title }}</h3>
+          </a>
+          <span class="bookshelf__by">by</span>
+          <span class="bookshelf__author">{{ .author }}</span>
+        </div>
+      </div>
+    </li>
+  {{ end }}
+</ul> 
+
+
+
+ <h3 style="margin-top:3em;" class="heading title">Finished in 2023</h3> <hr/>
+<ul class="bookshelf bookshelf--variant-grid">
+  {{ range (index .Site.Data.bookshelves "finishedreading") }}
+    <li>
+      <div class="bookshelf__item" title="{{ .title }} by {{ .author }}">
+        <a href="https://micro.blog/books/{{ .isbn }}">
+          <img class="bookshelf__cover" src="{{ .cover_url }}" />
+        </a>
+        <div class="bookshelf__meta">
+          <a href="https://micro.blog/books/{{ .isbn }}">
+            <h3 class="bookshelf__title">{{ .title }}</h3>
+          </a>
+          <span class="bookshelf__by">by</span>
+          <span class="bookshelf__author">{{ .author }}</span>
+        </div>
+      </div>
+    </li>
+  {{ end }}
+</ul> 
+     </section>
+    </section>
+{{ end }}
