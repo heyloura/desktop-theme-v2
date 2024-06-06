@@ -218,7 +218,7 @@ line-height: 53px;
 display: block;
   margin: 0px auto;
 }
-		nav menu li a.golden:before, #search-space-form > p:nth-child(1) > button:nth-child(3):before  {
+		.rpg-scope nav menu li a.golden:before, #search-space-form > p:nth-child(1) > button:nth-child(3):before  {
    			 background: url(/images/button-golden-left.png) right center no-repeat;
    			 background-size: 100% 100%;
     		margin: -5% 0 0 -46px;
@@ -230,7 +230,7 @@ display: block;
     		width: 34px;
     		height: 110%;
 		}
-		nav menu li a.golden:after, #search-space-form > p:nth-child(1) > button:nth-child(3):after {
+		.rpg-scope nav menu li a.golden:after, #search-space-form > p:nth-child(1) > button:nth-child(3):after {
    			 background: url(/images/button-golden-right.png) left center no-repeat;
     		background-size: 100% 100%;
    			 margin: -5% -46px 0 0;
@@ -285,16 +285,16 @@ display: block;
               right: 0;
               float: right;
         }
-        nav menu li a:hover, button:hover {
+        .rpg-scope nav menu li a:hover, button:hover {
             background-image: url(/images/button-hover.png);
         }
-        nav menu li a:active, button:active {
+        .rpg-scope nav menu li a:active, button:active {
             background-image: url(/images/button-down.png);
         }
-        nav menu li a.golden:hover {
+        .rpg-scope nav menu li a.golden:hover {
             background-image: url(/images/button-golden-hover.png);
         }
-        nav menu li a.golden:active {
+        .rpg-scope nav menu li a.golden:active {
             background-image: url(/images/button-golden-down.png);
         }
         header img {
@@ -396,7 +396,7 @@ max-width: 525px;
         }
         /* large cell phone screen */
         @media (min-width: 415px) {
-        nav menu li a {
+        .rpg-scope nav menu li a {
             width: 85%;
           }
 	.level-bars {
@@ -451,7 +451,7 @@ font-size: 1em;
                 line-height: 60px;
                 margin: 0px auto;
             }
-			.rpg-scope vnav menu li a.golden {
+			.rpg-scope nav menu li a.golden {
 				min-width: 120px;
 			}
             .bottom-frames {
