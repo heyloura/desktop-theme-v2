@@ -27,6 +27,8 @@
     {{ partial "rpg" . }}
 {{ else if in .Page.Params.categories "tai chi" }}
     {{ partial "taichi" . }}
+{{ else if .Page.Params.categories }}
+     {{ partial "code.html" . }}
 {{ else if eq .Permalink "https://heyloura.com" }}
 
 {{ else }}
