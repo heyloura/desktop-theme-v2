@@ -1,13 +1,5 @@
-<iframe style="width:100%;height:99%;border:0;" srcdoc="
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>RPG by Hey Loura</title>
-		<meta charset='utf-8' />
-		<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
-		<link rel='stylesheet' href='/css/rpgui.min.css' />
-	</head>
-	<body> 
+
+	<link rel='stylesheet' href='/css/rpgui.min.css' />
         <style>
             .wrapper span {
                 position: fixed;
@@ -72,6 +64,7 @@
                 }
             }
             </style>   
+<div class="rpg-scope">
                 <div class='wrapper effects'>
                     <span>🐉</span>
                     <span>🗡️</span>
@@ -316,33 +309,7 @@
         </section>
 </section>
 
-<script src='https://tinylytics.app/embed/ty-z3nCjHzz9nhTen2UU.js?hits&webring=avatar&kudos=👍' defer></script>
+		</div>
 		<script src='{{ . }}'></script>
 
-        <script>
-            window.Prism = window.Prism || {};
-            window.Prism.manual = true;
-          </script>
-          
-          <script src='/js/prism.js'></script>
-          
-          <script>
-            $(function() {
-              // Wrap the code inside the required <code> tag, when needed:
-              $('pre').each(function() {
-                if (1 !== $(this).children('code').length) {
-                  $(this).wrapInner('<code>');
-                }
-                if(!$(this).attr('class') || $(this).attr('class').indexOf('language-') !== 1)
-                {
-                    $(this).addClass('language-html');
-                }
-              });
-          
-              Prism.highlightAll()
-            });
-          </script>
-	</body>
-</html>
 
-            "></iframe>
