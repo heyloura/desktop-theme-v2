@@ -64,6 +64,8 @@ Grid:
   width: 100%;
 }</style>
 
+<div style="overflow-x:hidden;" id="dialogStatus" title="Books: maybe I should read one.">
+
       <section class="h-feed">
       <section>
     <h3  style="margin-top:3em;" class="heading title">Currently Reading</h3> 
@@ -133,4 +135,8 @@ Grid:
 </ul> 
      </section>
     </section>
+</div>
+  <script>
+$( "#dialogStatus" ).dialog({ height: $(window).width() <= 600 ?$(window).height() - 10 : $(window).height() / 1.25 , width: $(window).width() <= 600 ? $(window).width() - 20 : 600 });
+</script>
 {{ end }}
