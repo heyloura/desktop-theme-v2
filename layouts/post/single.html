@@ -220,6 +220,8 @@ display: none;
     $( "#pageDialog" ).dialog({ height: $(window).height() - 10, width: $(window).width() - 20 });
 {{ else if in .Page.Params.categories "RPG" }}
     $( "#pageDialog" ).dialog({ height: $(window).height() - 10, width: $(window).width() - 20 });
+{{ else if in .Page.Params.categories "rpg" }}
+    $( "#pageDialog" ).dialog({ height: $(window).height() - 10, width: $(window).width() - 20 });
 {{ else if in .Page.Params.categories "tai chi" }}
     $( "#pageDialog" ).dialog({ height: $(window).height() - 10, width: $(window).width() - 20 });
 {{ else if eq .Permalink "https://heyloura.com" }}
