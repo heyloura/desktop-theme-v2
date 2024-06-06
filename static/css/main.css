@@ -334,6 +334,10 @@ position: fixed;
             font: 0.9rem Inconsolata, monospace;
 }
 
+.warning a {
+    color: black;
+}
+
 @media screen and (max-width: 980px) {
         .warning img {
             display: none;
