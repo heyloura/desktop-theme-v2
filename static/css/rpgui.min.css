@@ -4,7 +4,6 @@
             --link-visited: #ebd9fa;
         }
         .rpg-scope {
-            background: var(--background);
             font-size:18px;
             cursor: url(/images/default.png), auto !important;
             font-family: Consolas, monaco, monospace;     
