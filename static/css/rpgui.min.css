@@ -38,7 +38,7 @@
         .rpg-scope img {
             border: 2px solid black;
         }
-.rpg-scope #search-space-form label {
+.rpg-scope #search-space-form label, .microblog_reply_signin {
 color: #fff;
 padding-bottom: 10px;
   display: block;
@@ -189,7 +189,7 @@ width:auto;
             line-height: 50px;
         }
         .rpg-scope nav menu li a.golden,
-.rpg-scope  #search-space-form > p:nth-child(1) > button:nth-child(3) {
+.rpg-scope  #search-space-form > p:nth-child(1) > button:nth-child(3), p.microblog_reply_button > input[type=submit] {
             background: url(/images/button-golden.png) center no-repeat no-repeat;
     		background-clip: padding-box;
     		background-origin: padding-box;
@@ -204,7 +204,11 @@ width:auto;
    		 	outline: 0;
     		width: 90px;
         }
-#search-space-form > p:nth-child(1) > button:nth-child(3)  {
+textarea {
+ width: 100%;
+}
+
+#search-space-form > p:nth-child(1) > button:nth-child(3),  p.microblog_reply_button > input[type=submit]   {
 width: 150px;
 line-height: 53px;
   font-weight: bold;
