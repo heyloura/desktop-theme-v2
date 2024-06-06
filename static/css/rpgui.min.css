@@ -135,7 +135,7 @@ box-sizing: border-box;
             background-origin:padding-box;
 		    color: white;
         }
-        .frame, .microblog_post, #search-space-form  {
+        .frame, .microblog_post, #search-space-form, .microblog_reply_form  {
             image-rendering: pixelated;
             border-style:solid;
             border-image-source:url(/images/border-image.png);
