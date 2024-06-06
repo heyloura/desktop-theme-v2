@@ -3,6 +3,24 @@
 
   {{ partial "head.html" . }}
 
+  <script type="module">
+  import clippy from 'https://unpkg.com/clippyts@1.0.4/dist/index.js';
+  clippy.load({
+    name: 'Clippy',
+    selector: 'my-clippy',
+  	successCb: (agent) => {
+    	console.log("Loaded!");
+    	agent.show();
+      agent.speak("Welcome to the DEMO!");
+      agent.animate();
+    },
+    failCb: (e) => {
+    	console.error(e)
+    }
+  })
+
+</script>
+
   <body class="language-markup">
     <div style="flex: 1;">
       <main>
@@ -20,6 +38,7 @@
       <div class="footer">
         <script src="https://status.lol/loura.js?time&link"></script>
       </div>
+      <div class="my-clippy"/>
     </div>
     
 <script>
@@ -72,6 +91,8 @@ for (let i = 0; i < videos.length; i++) {
     console.log(error);
   });
     </script>
+
+    
   </body>
 
 </html>
