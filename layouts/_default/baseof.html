@@ -59,6 +59,7 @@ for (let i = 0; i < videos.length; i++) {
         fetch('https://api.omg.lol/address/loura/now')
   .then(response => response.json())
   .then(page => {
+    console.log(page.response.now.content);
     $('.sticky-content').innerHTML = page.response.now.content;
   })
   .catch((error) => {
