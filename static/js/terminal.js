@@ -174,11 +174,12 @@ $( function() {
                     return [
                         '',
                         '<white>Used libraries:</white>',
-                        '* <a href="https://terminal.jcubic.pl">jQuery Terminal</a>',
-                        '* <a href="https://github.com/patorjk/figlet.js/">Figlet.js</a>',
-                        '* <a href="https://github.com/jcubic/isomorphic-lolcat">Isomorphic Lolcat</a>',
-                        '* <a href="https://jokeapi.dev/">Joke API</a>',
-                       '* <a target="_blank" href="https://codepen.io/swards/pen/gxQmbj">Chat bubble CSS</a>',
+                        '* <a target="_blank" href="https://terminal.jcubic.pl">jQuery Terminal</a>',
+                        '* <a target="_blank" href="https://github.com/patorjk/figlet.js/">Figlet.js</a>',
+                        '* <a target="_blank" href="https://github.com/jcubic/isomorphic-lolcat">Isomorphic Lolcat</a>',
+                        '* <a target="_blank" href="https://jokeapi.dev/">Joke API</a>',
+                        '* <a target="_blank" href="https://codepen.io/swards/pen/gxQmbj">Chat bubble CSS</a>',
+                        '* <a target="_blank" href="https://github.com/lizozom/clippyts/tree/master">Clippy.js</a>',
                         ''
                     ].join('\n');
                 },
