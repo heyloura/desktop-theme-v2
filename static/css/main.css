@@ -60,7 +60,6 @@ pre {
 }
 
 nav {
-  height: calc(100vh - 33px);
   width: 200px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -351,5 +350,7 @@ border-top: 2px solid #595953;
     text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2);
     box-shadow: 0px 0px 1px 0px #41403A, 0px 1px 1px 0px #474642;
     height: 30px;
-
+position: absolute;
+    width: 100%;
+    bottom: 0;
 }
