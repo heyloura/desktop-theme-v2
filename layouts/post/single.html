@@ -6,7 +6,9 @@
     {{ else if in .Page.Params.categories "code"  }}
     Hey Loura! Code
     {{ else if in .Page.Params.categories "RPG"  }}
-    Hey Loura! RPG
+    Hey Loura! RPG + ACNH
+    {{ else if in .Page.Params.categories "rpg"  }}
+    Hey Loura! RPG + ACNH
     {{ else if in .Page.Params.categories "tai chi"  }}
     Hey Loura! Tai Chi
     {{ else }}
@@ -20,6 +22,8 @@
 {{ else if in .Page.Params.categories "lillihub" }}
     {{ partial "lillihub.html" . }}
 {{ else if in .Page.Params.categories "RPG" }}
+    {{ partial "rpg" . }}
+{{ else if in .Page.Params.categories "rpg"  }}
     {{ partial "rpg" . }}
 {{ else if in .Page.Params.categories "tai chi" }}
     {{ partial "taichi" . }}
