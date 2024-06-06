@@ -82,6 +82,12 @@ nav {
   border: 2px solid rgba(0, 0, 0, 0);
 }
 
+.sticky-content {
+  text-align: center;
+  font: 0.9rem Inconsolata, monospace;
+  font-weight: bolder;
+}
+
 a.app {
   text-decoration: none;
   color: black;
