@@ -4,15 +4,17 @@
   {{ partial "head.html" . }}
 
   <body class="language-markup">
-    <main>
-        <nav>{{ partial "nav.html" . }}</nav>
-        {{ partial "sticker.html" . }}
-        {{ partial "sticky.html" . }}
-    </main>
-    {{ partial "terminal.html" . }}  
-    {{ block "main" . }}{{ end }}
-    <div class="footer">
-      <script src="https://status.lol/loura.js?time&link"></script>
+    <div style="flex: 1;">
+      <main>
+          <nav>{{ partial "nav.html" . }}</nav>
+          {{ partial "sticker.html" . }}
+          {{ partial "sticky.html" . }}
+      </main>
+      {{ partial "terminal.html" . }}  
+      {{ block "main" . }}{{ end }}
+      <div class="footer">
+        <script src="https://status.lol/loura.js?time&link"></script>
+      </div>
     </div>
     
 <script>
@@ -53,6 +55,17 @@ for (let i = 0; i < videos.length; i++) {
   });
 </script>
 <script src='https://tinylytics.app/embed/ty-z3nCjHzz9nhTen2UU.js?hits&webring=avatar&kudos=👍' defer></script>
+    <script>
+        fetch('https://api.omg.lol/address/loura/now')
+  .then(response => response.json())
+  .then(page => {
+    console.log(page);
+  })
+  .catch((error) => {
+    // TODO: nothing for now…
+    console.log(error);
+  });
+    </script>
   </body>
 
 </html>
