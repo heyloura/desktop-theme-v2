@@ -324,7 +324,7 @@ color: black;
 .warning {
 position: fixed;
     bottom: 60px;
-    right: 30px;
+    left: 30px;
     padding: 1em;
     color: black;
     background: rgba(255, 255, 255, 0.3);
@@ -333,6 +333,12 @@ position: fixed;
     border: 1px solid black;
             font: 0.9rem Inconsolata, monospace;
 }
+
+@media screen and (max-width: 980px) {
+        .warning img {
+            display: none;
+        }
+    }
 
 .footer {
 border-top: 2px solid #595953;
