@@ -23,7 +23,11 @@
         }
         .rpg-scope a:visited {
             color: var(--link-visited)
-        }    
+        }  
+.rpg-scope nav {
+    width: unset;
+    display: unset;
+}
         .rpg-scope header, .rpg-scope aside, .rpg-scope footer, .rpg-scope nav, .rpg-scope h1, .rpg-scope h2, .rpg-scope h3, .rpg-scope h4, .rpg-scope .effect, .rpg-scope .bookshelf_title, .rpg-scope .microblog_fullname {
             font-weight: bold;
             color:#fff;
@@ -603,3 +607,5 @@ background-color: var(--background);
 .e-content p {
   line-height: 1.3em;
 }
+
+
