@@ -1,5 +1,21 @@
 {{ define "main" }}
+  <script type="module">
+  import clippy from 'https://unpkg.com/clippyts@1.0.4/dist/index.js';
+  clippy.load({
+    name: 'Clippy',
+    selector: 'my-clippy',
+  	successCb: (agent) => {
+    	console.log("Loaded!");
+    	agent.show();
+      agent.speak("Welcome to the DEMO!");
+      agent.animate();
+    },
+    failCb: (e) => {
+    	console.error(e)
+    }
+  })
 
+</script>
 <script>
 $( "#dialogStatus" ).dialog("close")</script>
 {{ end }}
