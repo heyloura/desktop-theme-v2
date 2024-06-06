@@ -6,7 +6,9 @@
 
 
 const ClippyDemo = (function() {
+    //const availableAgents = ['Bonzi', 'Clippy', 'F1', 'Genie', 'Genius', 'Links', 'Merlin', 'Peedy', 'Rocky', 'Rover']
     const availableAgents = ['Bonzi', 'Clippy', 'F1', 'Genie', 'Genius', 'Links', 'Merlin', 'Peedy', 'Rocky', 'Rover']
+
     const talks = [
         'How can i help you?',
         'Nice day!',
@@ -35,8 +37,11 @@ const ClippyDemo = (function() {
                     agent.speak('I am ' + agentName + ', ' + talks[~~(Math.random() * talks.length)])
                     agent.animate()
                 }
-                agent._el.addEventListener('click', () => speak());
-                speak()
+                agent._el.addEventListener('click', () => {
+                  
+                  speak();
+                });
+                speak();
 
                 // Animate randomly
                 setInterval(() => {
@@ -58,14 +63,14 @@ const ClippyDemo = (function() {
 })();
 
 
-window.onload = () => {
-    ClippyDemo.init();
-    ClippyDemo.nextAgent();
-    document.getElementById('next-agent').addEventListener('click', () => {
-        ClippyDemo.destroy();
-        ClippyDemo.nextAgent();
-    });
-}
+// window.onload = () => {
+//     ClippyDemo.init();
+//     ClippyDemo.nextAgent();
+//     document.getElementById('next-agent').addEventListener('click', () => {
+//         ClippyDemo.destroy();
+//         ClippyDemo.nextAgent();
+//     });
+// }
 
 
 
