@@ -11,9 +11,10 @@
     </main>
     {{ partial "terminal.html" . }}  
     {{ block "main" . }}{{ end }}
-
+    <div class="footer">
+      <script src="https://status.lol/loura.js?time&link"></script>
+    </div>
     
-
 <script>
 let images = document.querySelectorAll('.terminal__prompt--contents img');
 for (let i = 0; i < images.length; i++) {
