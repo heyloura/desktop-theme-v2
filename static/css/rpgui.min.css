@@ -3,7 +3,7 @@
             --link-color: #aaf1e9;
             --link-visited: #ebd9fa;
         }
-        body {
+        .rpg-scope {
             background: var(--background);
             font-size:18px;
             cursor: url(/images/default.png), auto !important;
@@ -13,19 +13,19 @@
             padding: 0;
             color: #000000;
         }
-		button {
+	.rpg-scope button {
 			cursor: url(/images/point.png), auto !important;
 		}
-        a {
+        .rpg-scope a {
             cursor: url(/images/point.png), auto !important;
             color: var(--link-color);
             font-weight: bold;
             text-shadow:-2px 0 #000,0 2px #000,2px 0 #000,0 -2px #000;
         }
-        a:visited {
+        .rpg-scope a:visited {
             color: var(--link-visited)
         }    
-        header, aside, footer, nav, h1, h2, h3, h4, .effect, .bookshelf_title, .microblog_fullname {
+        .rpg-scope header, .rpg-scope aside, .rpg-scope footer, .rpg-scope nav, .rpg-scope h1, .rpg-scope h2, .rpg-scope h3, .rpg-scope h4, .rpg-scope .effect, .rpg-scope .bookshelf_title, .rpg-scope .microblog_fullname {
             font-weight: bold;
             color:#fff;
             text-shadow:-2px 0 #000,0 2px #000,2px 0 #000,0 -2px #000;
@@ -33,18 +33,18 @@
             padding:0;
             margin:7px 7px 17px;
         }      
-        .main {
+        .rpg-scope .main {
             padding-bottom: 3em;
         }
-        img {
+        .rpg-scope img {
             border: 2px solid black;
         }
-#search-space-form label {
+.rpg-scope #search-space-form label {
 color: #fff;
 padding-bottom: 10px;
   display: block;
 }
-#q {
+.rpg-scope #q {
 box-sizing: border-box;
   font-size: .9em;
   line-height: 32px;
@@ -171,11 +171,11 @@ width:auto;
         .microblog_text {
             color: #ffffff;
         }
-        nav menu {
+        .rpg-scope nav menu {
             list-style: none;
             padding: 0;
         }
-        nav menu li a {
+       .rpg-scope nav menu li a {
             color: #ffffff !important;
             display: block;
             width: 75%;
@@ -189,7 +189,8 @@ width:auto;
             padding: 0 15px;
             line-height: 50px;
         }
-        nav menu li a.golden, #search-space-form > p:nth-child(1) > button:nth-child(3) {
+        .rpg-scope nav menu li a.golden,
+.rpg-scope  #search-space-form > p:nth-child(1) > button:nth-child(3) {
             background: url(/images/button-golden.png) center no-repeat no-repeat;
     		background-clip: padding-box;
     		background-origin: padding-box;
@@ -411,19 +412,19 @@ font-size: small;
 		margin-bottom: 1em;
 		display:block;
 	}
-            nav {
+            .rpg-scope nav {
                 margin: 0px auto;
 				display:block;
 				margin-right:25px;
             }
-        .main-menu {
+        .rpg-scope .main-menu {
             display:block;
 font-size: 1em;
         }
-          .main-menu menu {
+          .rpg-scope .main-menu menu {
       		width: 100%;
       	}
-			.main {
+			.rpg-scope .main {
 				display: flex;
 			}
 			.level-bars {
@@ -431,7 +432,7 @@ font-size: 1em;
     			display: block;
 				font-size: small;
 			}
-            nav menu li a {
+            .rpg-scope nav menu li a {
                 color: #ffffff !important;
                 display: block;
                 width: 140px;
@@ -447,7 +448,7 @@ font-size: 1em;
                 line-height: 60px;
                 margin: 0px auto;
             }
-			nav menu li a.golden {
+			.rpg-scope vnav menu li a.golden {
 				min-width: 120px;
 			}
             .bottom-frames {
@@ -474,7 +475,7 @@ font-size: 1em;
             .photos img {
                 width: 45%;
             }
-            body {
+            .rpg-scope  {
                 padding: 5em 0;
             }
             .bottom-frames {
