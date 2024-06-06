@@ -13,8 +13,8 @@
       {{ partial "terminal.html" . }}  
       {{ block "main" . }}{{ end }}
       <div class="warning">
-            <small><b>Website hits: <span class="tinylytics_hits"></span></b> by <a href="https://tinylytics.app/">tinylytics</a></small><br>
-            <small><b>This website is frequently</b></small><br>
+            <small><b>Website hits: <span class="tinylytics_hits"></span></b> by <a href="https://tinylytics.app/">tinylytics</a></small>
+            <br>
             <img width="300px" src="https://heyloura.com/uploads/2023/cb25b1a913.gif">
         </div>
       <div class="footer">
@@ -66,7 +66,8 @@ for (let i = 0; i < videos.length; i++) {
   .then(response => response.json())
   .then(page => {
     console.log(page.response.now.content);
-    $('.sticky-content div').first().html = page.response.now.content;
+    console.log($('.sticky-content div').first());
+    $('.sticky-content div').first().html(page.response.now.content);
   })
   .catch((error) => {
     // TODO: nothing for now…
