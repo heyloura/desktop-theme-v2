@@ -455,7 +455,7 @@ font-size: 1em;
                 	grid-template-columns: 50% 50%;
             }
 			.post-content {
-				max-width: 500px;
+				max-width: 100%;
 			}
         }
         /* large screen */
@@ -482,7 +482,7 @@ font-size: 1em;
                 	grid-template-columns: 33% 33% 33%;
             }
 			.post-content {
-				max-width: 575px;
+				max-width: 100%;
 			}
         }
         @media (prefers-reduced-motion: reduce) {
