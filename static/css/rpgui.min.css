@@ -12,7 +12,7 @@
             padding: 0;
             color: #000000;
         }
-	.rpg-scope button {
+	.rpg-scope button, #conversation > div > form > p.microblog_reply_button > input[type=submit] {
 			cursor: url(/images/point.png), auto !important;
 		}
         .rpg-scope a {
