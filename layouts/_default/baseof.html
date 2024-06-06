@@ -60,7 +60,7 @@ for (let i = 0; i < videos.length; i++) {
   .then(response => response.json())
   .then(page => {
     console.log(page.response.now.content);
-    $('.sticky-content').innerHTML = page.response.now.content;
+    $('.sticky-content > div').html = page.response.now.content;
   })
   .catch((error) => {
     // TODO: nothing for now…
